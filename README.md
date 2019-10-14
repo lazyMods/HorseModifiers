@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/lazynessmind/HorseModifiers/master/imgs/header.png"><br>
 </h1>
 
-[![CurseForge](http://cf.way2muchnoise.eu/full_331657_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/horse-modifiers) [![CurseForge](http://cf.way2muchnoise.eu/versions/331657.svg)](https://www.curseforge.com/minecraft/mc-mods/horse-modifiers)
+[![CurseForge](http://cf.way2muchnoise.eu/full_347964_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/horse-modifiers) [![CurseForge](http://cf.way2muchnoise.eu/versions/347964.svg)](https://www.curseforge.com/minecraft/mc-mods/horse-modifiers)
 
 ## Description:
 
