@@ -3,9 +3,6 @@
   <img src="https://raw.githubusercontent.com/lazynessmind/HorseModifiers/master/imgs/header.png"><br>
 </h1>
 
-<<<<<<< Updated upstream
-[![CurseForge](http://cf.way2muchnoise.eu/full_347964_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/horse-modifiers) [![CurseForge](http://cf.way2muchnoise.eu/versions/347964.svg)](https://www.curseforge.com/minecraft/mc-mods/horse-modifiers)
-=======
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lazynessmind/HorseModifiers.svg">
 
@@ -20,16 +17,15 @@
   </a>
 
   <a href="https://www.curseforge.com/minecraft/mc-mods/horse-modifiers">
-    <img alt="Repository issues" src="http://cf.way2muchnoise.eu/full_331657_downloads.svg">
+    <img alt="Repository issues" src="http://cf.way2muchnoise.eu/full_347964_downloads.svg">
   </a>
 
   <a href="https://www.curseforge.com/minecraft/mc-mods/horse-modifiers">
-    <img alt="Repository issues" src="http://cf.way2muchnoise.eu/versions/331657.svg">
+    <img alt="Repository issues" src="http://cf.way2muchnoise.eu/versions/347964.svg">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
->>>>>>> Stashed changes
 
 ## Description:
 
