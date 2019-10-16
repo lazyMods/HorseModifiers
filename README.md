@@ -31,6 +31,22 @@
 
   Horses can be bred among themselves to create a better horse, so this mod changes this by adding carrots that alter the horse's attributes.
 
+## Changelog:
+
+<details>
+  <summary>Click to see:</summary>
+  
+  **1.0**
+  * First release;
+  
+  **1.0.1**
+  * Fix: carrots could not stack together, even if the carrot was the same type;
+  * Fix: set version in the mod info file.
+  * Fix: pack.mcmeta
+  * Updated Forge to lastest version;
+  
+</details>
+
 ## Features:
 
 ![Ola](https://raw.githubusercontent.com/lazynessmind/HorseModifiers/dev/imgs/recipe-with-text.png "Ola")
