@@ -1,17 +1,23 @@
 package com.lazynessmind.horsemodifier.registry;
 
+import com.lazynessmind.horsemodifier.Const;
 import com.lazynessmind.horsemodifier.HorseModifiers;
+import com.lazynessmind.horsemodifier.configs.HMConfig;
 import com.lazynessmind.horsemodifier.items.HMItems;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModContainer;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.VersionChecker;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.versions.forge.ForgeVersion;
+import net.minecraftforge.fml.javafmlmod.FMLModContainer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RegistryEvents {
@@ -25,15 +31,18 @@ public class RegistryEvents {
 
     }
 
-    //Maybe still broken at the moment
     @SubscribeEvent
     public static void onWorldLoaded(EntityJoinWorldEvent joinWorldEvent) {
-        System.out.println("is working");
-        if (!joinWorldEvent.getWorld().isRemote) {
-            if (joinWorldEvent.getEntity() instanceof PlayerEntity) {
-                PlayerEntity player = (PlayerEntity) joinWorldEvent.getEntity();
-                if (ForgeVersion.getStatus() == VersionChecker.Status.BETA) {
-                    player.sendMessage(new StringTextComponent(TextFormatting.BOLD + "[Farming Tools]" + TextFormatting.RED + " Current version is outdated! " + TextFormatting.WHITE + "Check the mod page to update. :)"));
+        World world = joinWorldEvent.getWorld();
+        Entity entity = joinWorldEvent.getEntity();
+
+        if (HMConfig.UPDATE_MSG.get()) {
+            if (!world.isRemote) {
+                if (entity instanceof PlayerEntity) {
+                    PlayerEntity player = (PlayerEntity) entity;
+                    if (VersionChecker.getResult(ModList.get().getModContainerById(Const.MOD_ID).get().getModInfo()).status == VersionChecker.Status.OUTDATED) {
+                        player.sendMessage(new StringTextComponent(TextFormatting.BOLD + "[Horse Modifiers]" + TextFormatting.RED + " Current version is outdated! " + TextFormatting.WHITE + "Check the mod page to update. :)"));
+                    }
                 }
             }
         }
