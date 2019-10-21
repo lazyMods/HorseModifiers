@@ -1,6 +1,7 @@
 package com.lazynessmind.horsemodifier.items;
 
 import net.minecraft.block.SoundType;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.horse.HorseEntity;
@@ -9,13 +10,24 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class HorseSpy extends HMItem {
 
     public HorseSpy() {
         super("horsespy");
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag tooltipFlag) {
+        super.addInformation(stack, world, list, tooltipFlag);
+        list.add(new StringTextComponent(TextFormatting.GOLD + "Click on the horse to spy."));
     }
 
     @Override
