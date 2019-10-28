@@ -3,11 +3,7 @@ loaderVersion="[28,)" #mandatory
 issueTrackerURL="https://github.com/lazynessmind/HorseModifiers/issues" #optional
 [[mods]] #mandatory
 modId="horsemodifiers" #mandatory
-<<<<<<< Updated upstream
-version="1.0.1" #mandatory
-=======
 version="1.1.1" #mandatory
->>>>>>> Stashed changes
 displayName="Horse Modifiers" #mandatory
 updateJSONURL="https://raw.githubusercontent.com/lazynessmind/HorseModifiers/dev/update.json" #optional
 displayURL="http://lazynessmind.com/" #optional TODO
