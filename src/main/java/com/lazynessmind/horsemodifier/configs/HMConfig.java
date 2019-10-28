@@ -47,7 +47,7 @@ public class HMConfig {
 
     }
 
-    public static void load(ForgeConfigSpec spec, Path path){
+    public static void load(ForgeConfigSpec spec, Path path) {
         final CommentedFileConfig configData = CommentedFileConfig.builder(path).sync().autosave().writingMode(WritingMode.REPLACE).build();
         configData.load();
         spec.setConfig(configData);

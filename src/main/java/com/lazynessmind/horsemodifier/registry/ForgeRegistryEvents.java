@@ -22,7 +22,7 @@ public class ForgeRegistryEvents {
                 if (event.getEntity() instanceof PlayerEntity) {
                     PlayerEntity player = (PlayerEntity) event.getEntity();
                     VersionChecker.CheckResult result = VersionChecker.getResult(ModList.get().getModContainerById(Const.MOD_ID).get().getModInfo());
-                    if (result.status == VersionChecker.Status.AHEAD) {
+                    if (result.status == VersionChecker.Status.OUTDATED) {
                         player.sendMessage(new StringTextComponent(TextFormatting.BOLD + "[Horse Modifiers]" + TextFormatting.RED + " Current version is outdated! " + TextFormatting.WHITE + "Check the mod page to update. :)"));
                     }
                 }
