@@ -13,6 +13,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 
+
 version = '1.1.1'
 group = 'com.lazynessmind'
 archivesBaseName = 'horsemodifiers'
@@ -20,7 +21,7 @@ archivesBaseName = 'horsemodifiers'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: 'snapshot', version: '20191016-1.14.3'
+    mappings channel: 'snapshot', version: '20191020-1.14.3'
     runs {
         client {
             workingDirectory project.file('run')
@@ -71,7 +72,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.14.4-28.1.56'
+    minecraft 'net.minecraftforge:forge:1.14.4-28.1.61'
 }
 
 jar {

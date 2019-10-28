@@ -25,8 +25,13 @@ public class HMConfig {
     public static ForgeConfigSpec.DoubleValue CARROT_HEALTH_ADD;
     public static ForgeConfigSpec.DoubleValue CARROT_SPEED_ADD;
 
+    public static ForgeConfigSpec.BooleanValue UPDATE_MSG;
+
     static {
         COMMON_BUILDER.comment("Horse Modifiers").push(CATEGORY_GENERAL);
+
+        UPDATE_MSG = COMMON_BUILDER.comment("Show update value").define("showUpdateMessage", true);
+
         COMMON_BUILDER.pop();
 
         COMMON_BUILDER.comment("Carrots").push(CATEGORY_CARROTS);

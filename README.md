@@ -45,11 +45,15 @@
   * Fix: pack.mcmeta
   * Updated Forge to lastest version;
   
+  **1.1**
+  * Updated Forge to lastest version;
+  * Added Horse Spy;
+  
 </details>
 
 ## Features:
 
-![Ola](https://raw.githubusercontent.com/lazynessmind/HorseModifiers/dev/imgs/recipe-with-text.png "Ola")
+![Ola](https://raw.githubusercontent.com/lazynessmind/HorseModifiers/master/imgs/recipe-with-text.png "Ola")
 
 ## Links:
 

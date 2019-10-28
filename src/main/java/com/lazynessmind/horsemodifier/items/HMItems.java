@@ -1,5 +1,6 @@
 package com.lazynessmind.horsemodifier.items;
 
+import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -18,4 +19,7 @@ public class HMItems {
 
     @ObjectHolder("horsemodifiers:jumpcarrot")
     public static JumpCarrot Jump_CARROT = new JumpCarrot();
+
+    @ObjectHolder("horsemodifiers:horsespy")
+    public static HorseSpy HORSE_SPY = new HorseSpy();
 }
