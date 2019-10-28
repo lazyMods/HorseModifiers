@@ -43,12 +43,18 @@
   * Fix: carrots could not stack together, even if the carrot was the same type;
   * Fix: set version in the mod info file.
   * Fix: pack.mcmeta
-  * Updated Forge to lastest version;
+  * Updated Forge to latest version;
   
   **1.1**
-  * Updated Forge to lastest version;
+  * Updated Forge to latest version;
   * Added Horse Spy;
   
+  **1.1**
+  * Updated Forge to latest version;
+  * Fix: Now the carrots can be applied to all types of Horses;
+  * Fix: Update message not showing. (Can be disabled on configs)
+  * Added Germany translation - https://github.com/pandory-network
+      
 </details>
 
 ## Features:
