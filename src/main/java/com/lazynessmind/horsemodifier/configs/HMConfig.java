@@ -39,10 +39,10 @@ public class HMConfig {
         COMMON_BUILDER.comment("Carrots").push(CATEGORY_CARROTS);
 
         CARROT_JUMP_ADD = COMMON_BUILDER.comment("Value that Jump Carrot gives").defineInRange("jumpCarrot", 0.1D, 0.1D, 1.0D);
-        CARROT_JUMP_ADD = COMMON_BUILDER.comment("Value that Jump Carrot gives").defineInRange("jumpCarrotLimit", 0.1D, 0.1D, Double.MAX_VALUE);
+        CARROT_JUMP_LIMIT = COMMON_BUILDER.comment("The max value to jump attribute").defineInRange("jumpCarrotLimit", 1.0D, 0.1D, Double.MAX_VALUE);
         CARROT_HEALTH_ADD = COMMON_BUILDER.comment("Value that Health Carrot gives").defineInRange("healthCarrot", 2.0D, 1.0D, 20.0D);
         CARROT_SPEED_ADD = COMMON_BUILDER.comment("Value that Speed Carrot gives").defineInRange("speedCarrot", 0.1D, 0.1D, 1.0D);
-        CARROT_SPEED_ADD = COMMON_BUILDER.comment("Value that Speed Carrot gives").defineInRange("speedCarrotLimit", 0.1D, 0.1D, Double.MAX_VALUE);
+        CARROT_SPEED_LIMIT = COMMON_BUILDER.comment("The max value to speed attribute").defineInRange("speedCarrotLimit", 1.0D, 0.1D, Double.MAX_VALUE);
 
         COMMON_BUILDER.pop();
 
