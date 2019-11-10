@@ -41,7 +41,7 @@ public class JumpCarrot extends Carrot {
         //1.0D = 7 blocks
         //The only value that will be configurable is the amount that the carrot modifies the attribute
         double currentJump = entity.getAttributes().getAttributeInstanceByName("horse.jumpStrength").getValue();
-        if (currentJump != 0 && currentJump < 1.0D) {
+        if (currentJump != 0 && currentJump < HMConfig.CARROT_JUMP_LIMIT.get()) {
             entity.getAttributes().getAttributeInstanceByName("horse.jumpStrength").setBaseValue(currentJump + HMConfig.CARROT_JUMP_ADD.get());
             entity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundType.CROP.getVolume() * 0.6F, SoundType.CROP.getPitch());
             return true;
