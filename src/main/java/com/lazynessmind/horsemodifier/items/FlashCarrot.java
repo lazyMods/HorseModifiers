@@ -9,9 +9,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.*;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -26,8 +24,8 @@ public class FlashCarrot extends Carrot {
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag tooltipFlag) {
         super.addInformation(stack, world, list, tooltipFlag);
-        list.add(new StringTextComponent(TextFormatting.GOLD + "Changes the speed attribute!"));
-        list.add(new StringTextComponent(TextFormatting.WHITE + "When the limit is reached you need to lock the horse in a cell!"));
+        list.add(new TranslationTextComponent("translation.flashcarrot.tooltip.one").applyTextStyle(TextFormatting.GOLD));
+        list.add(new TranslationTextComponent("translation.flashcarrot.tooltip.two"));
     }
 
     @Override
@@ -45,10 +43,9 @@ public class FlashCarrot extends Carrot {
         if (currentSpeed < 1.0D) {
             entity.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(currentSpeed + HMConfig.CARROT_SPEED_ADD.get());
             entity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundType.CROP.getVolume() * 0.6F, SoundType.CROP.getPitch());
-            System.out.println("Current speed: " + currentSpeed);
             return true;
         } else {
-            playerEntity.sendMessage(new StringTextComponent(TextFormatting.BLUE + "The limit has been reached!" + TextFormatting.RED + " Don't go to fast!"));
+            playerEntity.sendMessage(new TranslationTextComponent("translation.flashcarrot.message").applyTextStyle(TextFormatting.BLUE));
             return false;
         }
     }

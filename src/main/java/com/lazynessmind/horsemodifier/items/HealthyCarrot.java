@@ -10,8 +10,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -26,8 +26,8 @@ public class HealthyCarrot extends Carrot {
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag tooltipFlag) {
         super.addInformation(stack, world, list, tooltipFlag);
-        list.add(new StringTextComponent(TextFormatting.GOLD + "Changes the health attribute!"));
-        list.add(new StringTextComponent(TextFormatting.WHITE + "When the limit is reached the horse becomes the HULK!"));
+        list.add(new TranslationTextComponent("translation.healthycarrot.tooltip.one").applyTextStyle(TextFormatting.GOLD));
+        list.add(new TranslationTextComponent("translation.healthycarrot.tooltip.two"));
     }
 
     @Override
@@ -41,12 +41,12 @@ public class HealthyCarrot extends Carrot {
         //Each horse can have 60.0D (30 hearts)
         //The only value that will be configurable is the amount of heart on carrot can add
         double currentMaxHealth = entity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getValue();
-        if(currentMaxHealth < 60.0D) {
+        if (currentMaxHealth < 60.0D) {
             entity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(currentMaxHealth + HMConfig.CARROT_HEALTH_ADD.get());
             entity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundType.CROP.getVolume() * 0.6F, SoundType.CROP.getPitch());
             return true;
         } else {
-            playerEntity.sendMessage(new StringTextComponent(TextFormatting.BLUE + "The limit has been reached!" + TextFormatting.GOLD + " Don't go Super Saiyan God!"));
+            playerEntity.sendMessage(new TranslationTextComponent("translation.healthycarrot.message").applyTextStyle(TextFormatting.BLUE));
             return false;
         }
     }
