@@ -49,11 +49,17 @@
   * Updated Forge to latest version;
   * Added Horse Spy;
   
-  **1.1**
+  **1.1.1**
   * Updated Forge to latest version;
   * Fix: Now the carrots can be applied to all types of Horses;
   * Fix: Update message not showing. (Can be disabled on configs)
   * Added Germany translation - https://github.com/pandory-network
+  
+  **1.1.2**
+  * Updated Forge to latest version;
+  * Idea: added config to limiters (now you can change the max value to speed and jump attribute) - Thanks *neqaden*;
+  * Fix: Every text on the mod can be translated.
+  * Added Portuguese translation.
       
 </details>
 

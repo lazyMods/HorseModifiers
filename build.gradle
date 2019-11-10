@@ -14,7 +14,7 @@ apply plugin: 'maven-publish'
 
 
 
-version = '1.1.1'
+version = '1.1.2'
 group = 'com.lazynessmind'
 archivesBaseName = 'horsemodifiers'
 
@@ -72,7 +72,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.14.4-28.1.70'
+    minecraft 'net.minecraftforge:forge:1.14.4-28.1.87'
 }
 
 jar {
