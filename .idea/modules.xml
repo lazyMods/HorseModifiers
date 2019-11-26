@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/HorseModifiers.iml" filepath="$PROJECT_DIR$/.idea/HorseModifiers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HorseModifiers.api.iml" filepath="$PROJECT_DIR$/.idea/modules/HorseModifiers.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HorseModifiers.main.iml" filepath="$PROJECT_DIR$/.idea/modules/HorseModifiers.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HorseModifiers.test.iml" filepath="$PROJECT_DIR$/.idea/modules/HorseModifiers.test.iml" />
     </modules>
   </component>
 </project>

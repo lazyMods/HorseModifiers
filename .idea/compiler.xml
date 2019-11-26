@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="HorseModifiers.api" target="1.8" />
+      <module name="HorseModifiers.main" target="1.8" />
+      <module name="HorseModifiers.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
