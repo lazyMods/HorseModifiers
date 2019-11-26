@@ -1,0 +1,39 @@
+item.healthycarrot.name=Cenoura Saudável
+item.flashcarrot.name=Cenoura Flash
+item.jumpcarrot.name=Cenoura Saltitante
+item.horsespy.name=Espiador de Cavalos
+
+itemGroup.horseTab=Modificadores de Cavalos
+
+translation.flashcarrot.message=O limite foi alcançado! Não vá muito depressa!
+translation.flashcarrot.tooltip.one=Altera o atributo de rapidez!
+translation.flashcarrot.tooltip.two=Quando o limite for alcançado tu precisa prender o cavalo na jaula
+translation.healthycarrot.message=O limite foi alcançado! Não se torne Super Saiyan God!
+translation.healthycarrot.tooltip.one=Altera o atributo de vida!!
+translation.healthycarrot.tooltip.two=Quando o limite for alcançado o cavalo se transforma no HULK!
+translation.jumpcarrot.message=O limite foi alcançado! The moon can't be reached!
+translation.jumpcarrot.tooltip.one=Altera o atributo de salto!
+translation.jumpcarrot.tooltip.two=Quando o limite for alcançado o cavalo consegue saltar 7 blocos de altura!!
+translation.horsespy.tooltip.one=Clica em um cavalo para espiar
+
+gui.config.main_title=Horse Modifiers Configs
+
+gui.config.category.items=Items Configs
+gui.config.category.items.tooltip=All the mod items configs
+
+gui.config.items.flashCarrotValue.name=Flash Carrot
+gui.config.items.flashCarrotValue.comment=How much the carrot increases the speed (3.0 is the max value from minecraft)
+gui.config.items.flashCarrotLimit.name=Flash Carrot Limit
+gui.config.items.flashCarrotLimit.comment=Horse Speed max value
+gui.config.items.healthyCarrotValue.name=Healthy Carrot
+gui.config.items.healthyCarrotValue.comment=How much the carrot increases the HP
+gui.config.items.jumpCarrotValue.name=Jump Carrot
+gui.config.items.jumpCarrotValue.comment=How much the carrot increases the jump
+gui.config.items.jumpCarrotLimit.name=Jump Carrot Limit
+gui.config.items.jumpCarrotLimit.comment=Horse jump max value (2.2 is the max value from minecraft)
+
+gui.config.category.features=Features Configs
+gui.config.category.features.tooltip=All the mod features configs
+
+gui.config.features.showUpdateMessage.name=Show update message on load.
+gui.config.features.showUpdateMessage.comment=If ON will display one message when joined the world.

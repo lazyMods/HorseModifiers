@@ -1,4 +1,4 @@
-<h1 align="center">Horse Modifiers</h1>
+<h1 align="center">Horse Modifiers 1.12.2</h1>
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/lazynessmind/HorseModifiers/master/imgs/header.png"><br>
 </h1>
@@ -39,28 +39,16 @@
   **1.0**
   * First release;
   
-  **1.0.1**
-  * Fix: carrots could not stack together, even if the carrot was the same type;
-  * Fix: set version in the mod info file.
-  * Fix: pack.mcmeta
-  * Updated Forge to latest version;
-  
   **1.1**
-  * Updated Forge to latest version;
-  * Added Horse Spy;
+  * Fix: Update message with wrong mod name;
+  * New: Horse Spy, check horse attributes;
   
   **1.1.1**
-  * Updated Forge to latest version;
-  * Fix: Now the carrots can be applied to all types of Horses;
-  * Fix: Update message not showing. (Can be disabled on configs)
-  * Added Germany translation - https://github.com/pandory-network
+  * Updated Forge to latest version
+  * Idea: Add limit value config to each attribute - Thansk *neqaden*
+  * Fix: All the text is translated
+  * Added: Germany and Portuguese translations
   
-  **1.1.2**
-  * Updated Forge to latest version;
-  * Idea: added config to limiters (now you can change the max value to speed and jump attribute) - Thanks *neqaden*;
-  * Fix: Every text on the mod can be translated.
-  * Added Portuguese translation.
-      
 </details>
 
 ## Features:
