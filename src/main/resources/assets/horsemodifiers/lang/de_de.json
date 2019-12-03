@@ -9,14 +9,14 @@
   "itemGroup.horseTab": "Horse Modifiers",
 
   "comment_translations": "Translations:",
-  "translation.flashcarrot.message": "The limit has been reached! Don't go to fast!",
-  "translation.flashcarrot.tooltip.one": "Changes the speed attribute!",
-  "translation.flashcarrot.tooltip.two": "When the limit is reached you need to lock the horse in a cell!",
-  "translation.healthycarrot.message": "The limit has been reached! Don't go Super Saiyan God!",
-  "translation.healthycarrot.tooltip.one": "Changes the health attribute!",
-  "translation.healthycarrot.tooltip.two": "When the limit is reached the horse becomes the HULK!",
-  "translation.jumpcarrot.message": "The limit has been reached! The moon can't be reached!",
-  "translation.jumpcarrot.tooltip.one": "Changes the jump attribute!",
-  "translation.jumpcarrot.tooltip.two": "When the limit is reached the affected horse can jump 7 blocks height!!",
-  "translation.horsespy.tooltip.one": "Click on the horse to spy."
+  "translation.flashcarrot.message": "Die Maximale Geschwindigkeit ist erreicht!",
+  "translation.flashcarrot.tooltip.one": "Erhöht die Geschwindigkeit des Pferdes!",
+  "translation.flashcarrot.tooltip.two": "Wenn das Limit erreicht ist, müssen Sie das Pferd einsperren!",
+  "translation.healthycarrot.message": "Die Maximale Gesundheit wurde erreicht!",
+  "translation.healthycarrot.tooltip.one": "Erhöht die Maxmiale Gesundheit des Pferdes!",
+  "translation.healthycarrot.tooltip.two": "Wenn das Limit erreicht ist, wird das Pferd zum HULK!",
+  "translation.jumpcarrot.message": "Die Maximale Sprunghöhe ist erreicht!",
+  "translation.jumpcarrot.tooltip.one": "Erhöht die Sprunghöhe des Pferdes!",
+  "translation.jumpcarrot.tooltip.two": "Wenn das Limit erreicht ist, kann das betroffene Pferd 7 Blocks hoch springen!!",
+  "translation.horsespy.tooltip.one": "Auf ein Pferd anwenden, um seine Werte zu sehen."
 }
