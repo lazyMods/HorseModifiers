@@ -10,7 +10,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import java.nio.file.Path;
 
 @Mod.EventBusSubscriber
-public class HMConfig {
+public class ModConfigs {
 
     public static final String CATEGORY_GENERAL = "horse";
     public static final String CATEGORY_CARROTS = "carrots";
@@ -21,11 +21,10 @@ public class HMConfig {
     public static ForgeConfigSpec COMMON_CONFIG;
     public static ForgeConfigSpec CLIENT_CONFIG;
 
-    public static ForgeConfigSpec.DoubleValue CARROT_JUMP_ADD;
-    public static ForgeConfigSpec.DoubleValue CARROT_JUMP_LIMIT;
-    public static ForgeConfigSpec.DoubleValue CARROT_HEALTH_ADD;
-    public static ForgeConfigSpec.DoubleValue CARROT_SPEED_ADD;
-    public static ForgeConfigSpec.DoubleValue CARROT_SPEED_LIMIT;
+    public static ForgeConfigSpec.DoubleValue CARROT_JUMP_ADD_VALUE;
+    public static ForgeConfigSpec.DoubleValue CARROT_HEALTH_ADD_VALUE;
+    public static ForgeConfigSpec.DoubleValue CARROT_SPEED_ADD_VALUE;
+    public static ForgeConfigSpec.IntValue MAX_MODIFIERS_VALUE;
 
     public static ForgeConfigSpec.BooleanValue UPDATE_MSG;
 
@@ -38,11 +37,10 @@ public class HMConfig {
 
         COMMON_BUILDER.comment("Carrots").push(CATEGORY_CARROTS);
 
-        CARROT_JUMP_ADD = COMMON_BUILDER.comment("Value that Jump Carrot gives").defineInRange("jumpCarrot", 0.1D, 0.1D, 1.0D);
-        CARROT_JUMP_LIMIT = COMMON_BUILDER.comment("The max value to jump attribute").defineInRange("jumpCarrotLimit", 1.0D, 0.1D, 100.0D);
-        CARROT_HEALTH_ADD = COMMON_BUILDER.comment("Value that Health Carrot gives").defineInRange("healthCarrot", 2.0D, 1.0D, 20.0D);
-        CARROT_SPEED_ADD = COMMON_BUILDER.comment("Value that Speed Carrot gives").defineInRange("speedCarrot", 0.1D, 0.1D, 1.0D);
-        CARROT_SPEED_LIMIT = COMMON_BUILDER.comment("The max value to speed attribute").defineInRange("speedCarrotLimit", 1.0D, 0.1D, 100.0D);
+        CARROT_JUMP_ADD_VALUE = COMMON_BUILDER.comment("Value that Jump Carrot gives").defineInRange("jumpCarrot", 0.1D, 0.1D, Integer.MAX_VALUE);
+        CARROT_HEALTH_ADD_VALUE = COMMON_BUILDER.comment("Value that Healthy Carrot gives").defineInRange("healthyCarrot", 1.0D, 0.1D, 100.0D);
+        CARROT_SPEED_ADD_VALUE = COMMON_BUILDER.comment("Value that Flash Carrot gives").defineInRange("flashCarrot", 0.1D, 0.1D, 1.0D);
+        MAX_MODIFIERS_VALUE = COMMON_BUILDER.comment("How much modifiers can the horse hold for each modifiers (Normal is 10 each)").defineInRange("maxModifiers", 10, 1, Integer.MAX_VALUE);
 
         COMMON_BUILDER.pop();
 
