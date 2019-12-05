@@ -38,8 +38,8 @@ public class ModConfigs {
         COMMON_BUILDER.comment("Carrots").push(CATEGORY_CARROTS);
 
         CARROT_JUMP_ADD_VALUE = COMMON_BUILDER.comment("Value that Jump Carrot gives").defineInRange("jumpCarrot", 0.1D, 0.1D, Integer.MAX_VALUE);
-        CARROT_HEALTH_ADD_VALUE = COMMON_BUILDER.comment("Value that Healthy Carrot gives").defineInRange("healthyCarrot", 1.0D, 0.1D, 100.0D);
-        CARROT_SPEED_ADD_VALUE = COMMON_BUILDER.comment("Value that Flash Carrot gives").defineInRange("flashCarrot", 0.1D, 0.1D, 1.0D);
+        CARROT_HEALTH_ADD_VALUE = COMMON_BUILDER.comment("Value that Healthy Carrot gives").defineInRange("healthyCarrot", 2.0D, 0.1D, Integer.MAX_VALUE);
+        CARROT_SPEED_ADD_VALUE = COMMON_BUILDER.comment("Value that Flash Carrot gives").defineInRange("flashCarrot", 0.1D, 0.1D, Integer.MAX_VALUE);
         MAX_MODIFIERS_VALUE = COMMON_BUILDER.comment("How much modifiers can the horse hold for each modifiers (Normal is 10 each)").defineInRange("maxModifiers", 10, 1, Integer.MAX_VALUE);
 
         COMMON_BUILDER.pop();
