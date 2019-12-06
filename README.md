@@ -66,7 +66,7 @@
   * Redone modifiers system.
   * Changed Jump Carrot recipe.
   * Now you can see the attribute value in a GUI format.
-  * Updated Forge.s
+  * Updated Forges to 28.1.103
       
 </details>
 
