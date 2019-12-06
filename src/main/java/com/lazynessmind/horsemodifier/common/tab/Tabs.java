@@ -1,4 +1,4 @@
-package com.lazynessmind.horsemodifier.tab;
+package com.lazynessmind.horsemodifier.common.tab;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

@@ -1,13 +1,12 @@
-package com.lazynessmind.horsemodifier.items;
+package com.lazynessmind.horsemodifier.common.items;
 
-import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.ObjectHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HMItems {
+public class ModItems {
 
     public static final List<Item> ITEMS = new ArrayList<>();
 
@@ -18,7 +17,7 @@ public class HMItems {
     public static FlashCarrot FLASH_CARROT = new FlashCarrot();
 
     @ObjectHolder("horsemodifiers:jumpcarrot")
-    public static JumpCarrot Jump_CARROT = new JumpCarrot();
+    public static JumpCarrot JUMP_CARROT = new JumpCarrot();
 
     @ObjectHolder("horsemodifiers:horsespy")
     public static HorseSpy HORSE_SPY = new HorseSpy();

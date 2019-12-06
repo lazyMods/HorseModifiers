@@ -1,4 +1,4 @@
-package com.lazynessmind.horsemodifier.interfaces;
+package com.lazynessmind.horsemodifier.common.proxy;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;

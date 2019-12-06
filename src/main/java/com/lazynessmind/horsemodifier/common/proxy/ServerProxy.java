@@ -1,10 +1,9 @@
-package com.lazynessmind.horsemodifier.proxy;
+package com.lazynessmind.horsemodifier.common.proxy;
 
-import com.lazynessmind.horsemodifier.interfaces.IProxy;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class ClientProxy implements IProxy {
+public class ServerProxy implements IProxy {
 
     @Override
     public void init() {

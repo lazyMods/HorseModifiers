@@ -1,13 +1,13 @@
-package com.lazynessmind.horsemodifier.items;
+package com.lazynessmind.horsemodifier.common.items;
 
 import com.lazynessmind.horsemodifier.HorseModifiers;
 import net.minecraft.item.Item;
 
-public class HMItem extends Item {
+public class ModItem extends Item {
 
-    public HMItem(String name) {
+    public ModItem(String name) {
         super(new Item.Properties().group(HorseModifiers.tabs.itemGroup));
         setRegistryName(name);
-        HMItems.ITEMS.add(this);
+        ModItems.ITEMS.add(this);
     }
 }

@@ -4,7 +4,7 @@ import com.lazynessmind.horsemodifier.HorseModifiers;
 import com.lazynessmind.horsemodifier.client.container.HorseSpyContainer;
 import com.lazynessmind.horsemodifier.common.items.ModItems;
 import com.lazynessmind.horsemodifier.common.network.PacketHandler;
-import com.lazynessmind.horsemodifier.common.network.packet.RemoveUpgradePacket;
+import com.lazynessmind.horsemodifier.common.network.packet.RemoveModifierPacket;
 import com.lazynessmind.horsemodifier.common.util.ItemHelper;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.Minecraft;
@@ -62,21 +62,21 @@ public class HorseSpyScreen extends ContainerScreen<HorseSpyContainer> {
     private void initButtons() {
         this.addButton(new GuiButtonExt(this.guiLeft + 154, this.guiTop + 13, 18, 10, "-", onPress -> {
             if (this.horseSpyContainer.getModifierCount(0) != 0) {
-                PacketHandler.sendToServer(new RemoveUpgradePacket(ItemHelper.getStackFromItem(ModItems.FLASH_CARROT), this.horseSpyContainer.getHorseID()));
+                PacketHandler.sendToServer(new RemoveModifierPacket(ItemHelper.getStackFromItem(ModItems.FLASH_CARROT), this.horseSpyContainer.getHorseID()));
                 horseSpyContainer.removeModifier(0);
             }
         }));
 
         this.addButton(new GuiButtonExt(this.guiLeft + 154, this.guiTop + 38, 18, 10, "-", onPress -> {
             if (this.horseSpyContainer.getModifierCount(1) != 0) {
-                PacketHandler.sendToServer(new RemoveUpgradePacket(ItemHelper.getStackFromItem(ModItems.JUMP_CARROT), this.horseSpyContainer.getHorseID()));
+                PacketHandler.sendToServer(new RemoveModifierPacket(ItemHelper.getStackFromItem(ModItems.JUMP_CARROT), this.horseSpyContainer.getHorseID()));
                 horseSpyContainer.removeModifier(1);
             }
         }));
 
         this.addButton(new GuiButtonExt(this.guiLeft + 154, this.guiTop + 63, 18, 10, "-", onPress -> {
             if (this.horseSpyContainer.getModifierCount(2) != 0) {
-                PacketHandler.sendToServer(new RemoveUpgradePacket(ItemHelper.getStackFromItem(ModItems.HEALTH_CARROT), this.horseSpyContainer.getHorseID()));
+                PacketHandler.sendToServer(new RemoveModifierPacket(ItemHelper.getStackFromItem(ModItems.HEALTH_CARROT), this.horseSpyContainer.getHorseID()));
                 horseSpyContainer.removeModifier(2);
             }
         }));

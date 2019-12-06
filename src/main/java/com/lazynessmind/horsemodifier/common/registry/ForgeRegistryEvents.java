@@ -1,8 +1,8 @@
-package com.lazynessmind.horsemodifier.registry;
+package com.lazynessmind.horsemodifier.common.registry;
 
 
-import com.lazynessmind.horsemodifier.Const;
-import com.lazynessmind.horsemodifier.configs.HMConfig;
+import com.lazynessmind.horsemodifier.HorseModifiers;
+import com.lazynessmind.horsemodifier.common.configs.ModConfigs;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -17,11 +17,11 @@ public class ForgeRegistryEvents {
 
     @SubscribeEvent
     public static void onWorldLoaded(EntityJoinWorldEvent event) {
-        if(!event.getWorld().isRemote){
-            if (HMConfig.UPDATE_MSG.get()) {
+        if (!event.getWorld().isRemote) {
+            if (ModConfigs.UPDATE_MSG.get()) {
                 if (event.getEntity() instanceof PlayerEntity) {
                     PlayerEntity player = (PlayerEntity) event.getEntity();
-                    VersionChecker.CheckResult result = VersionChecker.getResult(ModList.get().getModContainerById(Const.MOD_ID).get().getModInfo());
+                    VersionChecker.CheckResult result = VersionChecker.getResult(ModList.get().getModContainerById(HorseModifiers.MOD_ID).get().getModInfo());
                     if (result.status == VersionChecker.Status.OUTDATED) {
                         player.sendMessage(new StringTextComponent(TextFormatting.BOLD + "[Horse Modifiers]" + TextFormatting.RED + " Current version is outdated! " + TextFormatting.WHITE + "Check the mod page to update. :)"));
                     }

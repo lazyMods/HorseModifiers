@@ -1,6 +1,6 @@
-package com.lazynessmind.horsemodifier.registry;
+package com.lazynessmind.horsemodifier.common.registry;
 
-import com.lazynessmind.horsemodifier.items.HMItems;
+import com.lazynessmind.horsemodifier.common.items.ModItems;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -11,6 +11,6 @@ public class ModRegistryEvents {
 
     @SubscribeEvent
     public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll(HMItems.ITEMS.toArray(new Item[0]));
+        event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
     }
 }
