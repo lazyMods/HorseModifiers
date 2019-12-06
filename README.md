@@ -60,6 +60,13 @@
   * Idea: added config to limiters (now you can change the max value to speed and jump attribute) - Thanks *neqaden*;
   * Fix: Every text on the mod can be translated.
   * Added Portuguese translation.
+  
+  **1.2.0**
+  * Removed Horse Spy.
+  * Redone modifiers system.
+  * Changed Jump Carrot recipe.
+  * Now you can see the attribute value in a GUI format.
+  * Updated Forge.s
       
 </details>
 
