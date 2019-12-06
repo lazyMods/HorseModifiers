@@ -2,21 +2,16 @@
   "comment_items": "Items:",
   "item.horsemodifiers.healthycarrot": "Cenoura Saudável",
   "item.horsemodifiers.flashcarrot": "Cenoura Flash",
-  "item.horsemodifiers.jumpcarrot": "Cenoura Saltitante",
-  "item.horsemodifiers.horsespy": "Espiador de Cavalos",
+  "item.horsemodifiers.jumpcarrot": "Cenoura Saltitante"
 
   "comment_tabs": "Tabs",
   "itemGroup.horseTab": "Modificadores de Cavalos",
 
   "comment_translations": "Translations:",
-  "translation.flashcarrot.message": "O limite foi alcançado! Não vá muito depressa!",
   "translation.flashcarrot.tooltip.one": "Altera o atributo de rapidez!",
   "translation.flashcarrot.tooltip.two": "Quando o limite for alcançado tu precisa prender o cavalo na jaula",
-  "translation.healthycarrot.message": "O limite foi alcançado! Não se torne Super Saiyan God!",
   "translation.healthycarrot.tooltip.one": "Altera o atributo de vida!!",
   "translation.healthycarrot.tooltip.two": "Quando o limite for alcançado o cavalo se transforma no HULK!",
-  "translation.jumpcarrot.message": "O limite foi alcançado! The moon can't be reached!",
   "translation.jumpcarrot.tooltip.one": "Altera o atributo de salto!",
-  "translation.jumpcarrot.tooltip.two": "Quando o limite for alcançado o cavalo consegue saltar 7 blocos de altura!!",
-  "translation.horsespy.tooltip.one": "Clica em um cavalo para espiar."
+  "translation.jumpcarrot.tooltip.two": "Quando o limite for alcançado o cavalo consegue saltar 7 blocos de altura!!"
 }
