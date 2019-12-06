@@ -41,7 +41,7 @@ public class JumpCarrot extends Carrot {
         if (HorsesData.getJump(entity) < ModConfigs.MAX_MODIFIERS_VALUE.get()) {
             entity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundType.CROP.getVolume() * 0.6F, SoundType.CROP.getPitch());
             HorsesData.setJump(entity, HorsesData.getJump(entity) + 1);
-            entity.getAttributes().getAttributeInstanceByName("horse.jumpStrength").setBaseValue(HorsesData.getDefaultJump(entity) + (ModConfigs.CARROT_JUMP_ADD_VALUE.get() * HorsesData.getJump(entity)));
+            HorsesData.increaseAttrValue(entity, 1);
             return true;
         } else {
             return false;

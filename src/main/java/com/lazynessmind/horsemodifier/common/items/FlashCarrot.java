@@ -42,7 +42,7 @@ public class FlashCarrot extends Carrot {
         if(HorsesData.getSpeed(entity) < ModConfigs.MAX_MODIFIERS_VALUE.get()){
             entity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundType.CROP.getVolume() * 0.6F, SoundType.CROP.getPitch());
             HorsesData.setSpeed(entity, HorsesData.getSpeed(entity)+1);
-            entity.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(HorsesData.getDefaultSpeed(entity) + (ModConfigs.CARROT_SPEED_ADD_VALUE.get() * HorsesData.getSpeed(entity)));
+            HorsesData.increaseAttrValue(entity, 0);
             return true;
         } else {
             return false;

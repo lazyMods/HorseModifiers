@@ -42,7 +42,7 @@ public class HealthyCarrot extends Carrot {
         if (HorsesData.getHealth(entity) < ModConfigs.MAX_MODIFIERS_VALUE.get()) {
             entity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundType.CROP.getVolume() * 0.6F, SoundType.CROP.getPitch());
             HorsesData.setHealth(entity, HorsesData.getHealth(entity) + 1);
-            entity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(HorsesData.getDefaultHealth(entity) + (ModConfigs.CARROT_HEALTH_ADD_VALUE.get() * HorsesData.getHealth(entity)));
+            HorsesData.increaseAttrValue(entity, 2);
             return true;
         } else {
             return false;
