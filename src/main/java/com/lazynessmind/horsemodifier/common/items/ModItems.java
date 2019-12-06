@@ -19,6 +19,6 @@ public class ModItems {
     @ObjectHolder("horsemodifiers:jumpcarrot")
     public static JumpCarrot JUMP_CARROT = new JumpCarrot();
 
-    @ObjectHolder("horsemodifiers:horsespy")
-    public static HorseSpy HORSE_SPY = new HorseSpy();
+//    @ObjectHolder("horsemodifiers:horsespy")
+//    public static HorseSpy HORSE_SPY = new HorseSpy();
 }
