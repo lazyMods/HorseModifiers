@@ -30,6 +30,8 @@
 ## Description:
 
   Horses can be bred among themselves to create a better horse, so this mod changes this by adding carrots that alter the horse's attributes.
+    
+  * Showcase Video - https://www.youtube.com/watch?v=I7mTPfNSDEc
 
 ## Changelog:
 
