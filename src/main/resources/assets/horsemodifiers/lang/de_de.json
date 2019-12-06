@@ -1,9 +1,18 @@
 {
   "comment_items": "Items:",
-  "item.horsemodifiers.healthycarrot": "Gesunde Karotte",
-  "item.horsemodifiers.flashcarrot": "Leuchtende Karotte",
-  "item.horsemodifiers.jumpcarrot": "Springende Karotte",
+  "item.horsemodifiers.healthycarrot": "Karotte der Gesundheit",
+  "item.horsemodifiers.flashcarrot": "Karotte der Geschwindigkeit",
+  "item.horsemodifiers.jumpcarrot": "Karotte der Sprungkraft",
 
-  "comment_tabs": "Tabs",
-  "itemGroup.horseTab": "Horse Modifiers"
+  "comment_tabs": "Kategorien",
+  "itemGroup.horseTab": "Horse Modifiers",
+
+  "comment_translations": "Übersetzungen:",
+  "translation.flashcarrot.tooltip.one": "Ändert die Geschwindigkeit.",
+  "translation.flashcarrot.tooltip.two": "Wenn das Limit erreicht ist, ist dein Pferd schneller als der Blitz!",
+  "translation.healthycarrot.tooltip.one": "Ändert die maximale Gesundheit.",
+  "translation.healthycarrot.tooltip.two": "Wenn das Limit erreicht ist, ist dein Pferd nahezu unsterblich!",
+  "translation.jumpcarrot.tooltip.one": "Ändert die Sprunghöhe.",
+  "translation.jumpcarrot.tooltip.two": "Wenn das Limit erreicht ist, kann dein Pferd bis zu 7 Blöcke hoch springen!",
+  "translation.horsespy.tooltip.one": "Klicke mit der Lupe auf dein Pferd, um seine Attribute zu sehen."
 }
