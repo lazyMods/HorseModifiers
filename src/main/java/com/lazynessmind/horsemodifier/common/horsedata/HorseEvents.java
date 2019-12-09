@@ -46,24 +46,5 @@ public class HorseEvents {
         }
     }
 
-    //!Add button to access the current modifiers that the horse holds.
-    @OnlyIn(value = Dist.CLIENT)
-    @SubscribeEvent
-    public static void onGuiPost(GuiScreenEvent.InitGuiEvent.Post event) {
-        Screen screen = event.getGui();
-        if (screen instanceof HorseInventoryScreen) {
-            HorseInventoryScreen horseInventoryScreen = (HorseInventoryScreen) screen;
-            if (event.getWidgetList() != null) {
-                final ResourceLocation HORSE_SPY = new ResourceLocation(HorseModifiers.MOD_ID + ":textures/gui/guibuttons.png");
-                event.addWidget(new ImageButton(horseInventoryScreen.getGuiLeft(), horseInventoryScreen.getGuiTop() - 18, 20, 18, 0, 0, 19, HORSE_SPY, button -> {
-                    try {
-                        AbstractHorseEntity horseEntity = (AbstractHorseEntity) FieldUtils.readField(horseInventoryScreen, "horseEntity", true);
-                        PacketHandler.INSTANCE.sendToServer(new OpenHorseSpyScreenPacket(horseEntity.getEntityId()));
-                    } catch (IllegalAccessException e) {
-                        e.printStackTrace();
-                    }
-                }));
-            }
-        }
-    }
+
 }
