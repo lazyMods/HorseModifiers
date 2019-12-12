@@ -27,51 +27,7 @@ public class HorseSpyContainer extends Container {
         return new HorseSpyContainer(ModContainers.HORSE_SPY, windowId, horseEntity);
     }
 
-    public int getHorseID() {
-        return this.horseEntity.getEntityId();
-    }
 
-
-
-    public float getAttributeValue(int index) {
-        switch (index) {
-            case 0:
-                return (float)this.horseEntity.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getValue();
-            case 1:
-                return (float)this.horseEntity.getAttributes().getAttributeInstanceByName("horse.jumpStrength").getValue();
-            case 2:
-                return (float)this.horseEntity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getValue();
-        }
-        return 6.9F;
-    }
-
-    public int getModifierCount(int index) {
-        if (this.horseEntity != null) {
-            switch (index) {
-                case 0:
-                    return HorsesData.getSpeed(this.horseEntity);
-                case 1:
-                    return HorsesData.getJump(this.horseEntity);
-                case 2:
-                    return HorsesData.getHealth(this.horseEntity);
-            }
-        }
-        return 69;
-    }
-
-    public void removeModifier(int index) {
-        switch (index) {
-            case 0:
-                HorsesData.setSpeed(this.horseEntity, getModifierCount(0) - 1);
-                break;
-            case 1:
-                HorsesData.setJump(this.horseEntity, getModifierCount(1) - 1);
-                break;
-            case 2:
-                HorsesData.setHealth(this.horseEntity, getModifierCount(2) - 1);
-                break;
-        }
-    }
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {

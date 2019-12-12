@@ -1,6 +1,7 @@
 package com.lazynessmind.horsemodifier.common.items;
 
 import com.lazynessmind.horsemodifier.client.container.HorseSpyContainer;
+import com.lazynessmind.horsemodifier.common.horsedata.HorsesData;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -28,7 +29,7 @@ public class HorseSpy extends ModItem implements INamedContainerProvider {
 
     public HorseSpy() {
         super("horsespy");
-    }
+}
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag tooltipFlag) {
@@ -54,6 +55,9 @@ public class HorseSpy extends ModItem implements INamedContainerProvider {
                 player.sendMessage(new StringTextComponent("Speed: " + TextFormatting.GREEN + speed));
                 player.sendMessage(new StringTextComponent("Jump: " + TextFormatting.GREEN + jump));
                 player.sendMessage(new StringTextComponent("Health: " + TextFormatting.GREEN + health));
+                player.sendMessage(new StringTextComponent("SpeedCount: " + TextFormatting.GREEN + HorsesData.getSpeed(horseEntity)));
+                player.sendMessage(new StringTextComponent("JumpCount: " + TextFormatting.GREEN + HorsesData.getJump(horseEntity)));
+                player.sendMessage(new StringTextComponent("HealthCount: " + TextFormatting.GREEN + HorsesData.getHealth(horseEntity)));
                 player.sendMessage(new StringTextComponent(TextFormatting.DARK_PURPLE + "======================================="));
             }
         }

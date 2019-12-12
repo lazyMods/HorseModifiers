@@ -1,102 +1,64 @@
 package com.lazynessmind.horsemodifier.common.horsedata;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.lazynessmind.horsemodifier.common.configs.ModConfigs;
 import com.lazynessmind.horsemodifier.common.items.ModItems;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.loading.FMLPaths;
-
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.UUID;
+import net.minecraft.nbt.CompoundNBT;
 
 public class HorsesData {
 
-    //! Saves a blank file when the horse is tamed.
-    public static void saveNewHorseToFile(HorseEntity entity) {
-        try {
-            int speed = 0;
-            int jump = 0;
-            int health = 0;
+    public static final String TAG = "HM";
+    public static final String TAG_SPEED = "Speed";
+    public static final String TAG_JUMP = "Jump";
+    public static final String TAG_HEALTH = "Health";
 
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            HorseModel horseModel = new HorseModel(speed, jump, health);
+    public static CompoundNBT horseData;
 
-            FileWriter writer = new FileWriter(getHorseFile(entity.getUniqueID()), false);
-            gson.toJson(horseModel, writer);
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void saveNewDataToHorse(HorseEntity entity) {
+        CompoundNBT compoundNBT = new CompoundNBT();
+        compoundNBT.putInt(TAG_SPEED, 0);
+        compoundNBT.putInt(TAG_JUMP, 0);
+        compoundNBT.putInt(TAG_HEALTH, 0);
+        entity.getPersistentData().put(TAG, compoundNBT);
     }
 
-    //! Saves the new info to the existing horse file.
-    private static void saveHorseToFile(HorseEntity entity, int speed, int jump, int health) {
-        try {
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            HorseModel horseModel = new HorseModel(speed, jump, health);
-
-            FileWriter writer = new FileWriter(getHorseFile(entity.getUniqueID()), false);
-            gson.toJson(horseModel, writer);
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void saveDataToHorse(HorseEntity entity, int speed, int jump, int health) {
+        CompoundNBT compoundNBT = entity.getPersistentData().getCompound(TAG);
+        compoundNBT.putInt(TAG_SPEED, speed);
+        compoundNBT.putInt(TAG_JUMP, jump);
+        compoundNBT.putInt(TAG_HEALTH, health);
+        entity.getPersistentData().put(TAG, compoundNBT);
     }
 
-    //! Return an HorseModel Object with the info on the horse file.
-    public static HorseModel getHorseData(UUID id) {
-        try {
-            FileReader reader = new FileReader(getHorseFile(id));
-            Gson jsonParser = new Gson();
-            return jsonParser.fromJson(reader, HorseModel.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return new HorseModel();
-    }
-
-    //! Get the file that corresponds to the horse with the @param id
-    public static File getHorseFile(UUID id) throws IOException {
-        Path path = Paths.get(FMLPaths.GAMEDIR.get() + "/saves/" + Minecraft.getInstance().getIntegratedServer().getFolderName() + "/hm");
-        if (!Files.exists(path)) {
-            Files.createDirectories(path);
-        }
-        return new File(path.toFile(), id.toString() + ".json");
+    public static CompoundNBT getData(HorseEntity entity) {
+        return entity.getPersistentData().getCompound(TAG);
     }
 
     //! *************************** Getters and setters ******************************
     public static int getSpeed(HorseEntity entity) {
-        return getHorseData(entity.getUniqueID()).getSpeed();
+        return getData(entity).getInt(TAG_SPEED);
     }
 
     public static int getJump(HorseEntity entity) {
-        return getHorseData(entity.getUniqueID()).getJump();
+        return getData(entity).getInt(TAG_JUMP);
     }
 
     public static int getHealth(HorseEntity entity) {
-        return getHorseData(entity.getUniqueID()).getHealth();
+        return getData(entity).getInt(TAG_HEALTH);
     }
 
     public static void setSpeed(HorseEntity horseEntity, int newValue) {
-        saveHorseToFile(horseEntity, newValue, getJump(horseEntity), getHealth(horseEntity));
+        saveDataToHorse(horseEntity, newValue, getJump(horseEntity), getHealth(horseEntity));
     }
 
     public static void setJump(HorseEntity horseEntity, int newValue) {
-        saveHorseToFile(horseEntity, getSpeed(horseEntity), newValue, getHealth(horseEntity));
+        saveDataToHorse(horseEntity, getSpeed(horseEntity), newValue, getHealth(horseEntity));
     }
 
     public static void setHealth(HorseEntity horseEntity, int newValue) {
-        saveHorseToFile(horseEntity, getSpeed(horseEntity), getJump(horseEntity), newValue);
+        saveDataToHorse(horseEntity, getSpeed(horseEntity), getJump(horseEntity), newValue);
     }
 
     //! Get the current attributes on the horse

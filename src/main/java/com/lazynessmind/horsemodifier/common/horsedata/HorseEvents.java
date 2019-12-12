@@ -3,22 +3,16 @@ package com.lazynessmind.horsemodifier.common.horsedata;
 import com.lazynessmind.horsemodifier.HorseModifiers;
 import com.lazynessmind.horsemodifier.common.network.PacketHandler;
 import com.lazynessmind.horsemodifier.common.network.packet.OpenHorseSpyScreenPacket;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.inventory.HorseInventoryScreen;
-import net.minecraft.client.gui.widget.button.ImageButton;
-import net.minecraft.entity.passive.horse.AbstractHorseEntity;
+import com.lazynessmind.horsemodifier.common.proxy.ClientProxy;
 import net.minecraft.entity.passive.horse.HorseEntity;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.GuiScreenEvent;
+import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.event.entity.living.AnimalTameEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.apache.commons.lang3.reflect.FieldUtils;
-
-import java.io.IOException;
+import net.minecraftforge.fml.network.NetworkDirection;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class HorseEvents {
@@ -27,24 +21,20 @@ public class HorseEvents {
     @SubscribeEvent
     public static void onTame(AnimalTameEvent event) {
         if (event.getAnimal() instanceof HorseEntity) {
-            HorsesData.saveNewHorseToFile((HorseEntity) event.getEntity());
+            HorsesData.saveNewDataToHorse((HorseEntity) event.getEntity());
         }
     }
 
-    //! Delete save file on death
     @SubscribeEvent
-    public static void onDeath(LivingDeathEvent event){
-        if(event.getEntity() instanceof HorseEntity){
-            HorseEntity entity = (HorseEntity) event.getEntity();
-            if(entity.isTame()){
-                try {
-                    if(HorsesData.getHorseFile(entity.getUniqueID()).delete()) System.out.println("File from horse with id " + entity.getUniqueID() + " deleted");
-                } catch (IOException e) {
-                    e.printStackTrace();
+    public static void onInteract(PlayerInteractEvent.EntityInteract entityInteract){
+        if(entityInteract.getPlayer().isSneaking()) {
+            if (entityInteract.getPlayer() instanceof ServerPlayerEntity) {
+                if (entityInteract.getTarget() instanceof HorseEntity) {
+                    entityInteract.setCanceled(true);
+                    ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) entityInteract.getPlayer();
+                    PacketHandler.INSTANCE.sendTo(new OpenHorseSpyScreenPacket(entityInteract.getTarget().getEntityId()), serverPlayerEntity.connection.netManager, NetworkDirection.PLAY_TO_CLIENT);
                 }
             }
         }
     }
-
-
 }
