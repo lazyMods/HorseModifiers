@@ -52,11 +52,11 @@ public class HorseSpy extends ModItem {
                         if (stack.getTag().getInt(TAG_CURRENT_MODE) == 0) {
                             this.displayHorseStats(horseEntity, player);
                         } else if (stack.getTag().getInt(TAG_CURRENT_MODE) == 1) {
-                            this.removeUpgrade(0, "Removed 1 Speed Modifier. -> Left " + (HorsesData.getValueById(0, horseEntity) - 1), player, horseEntity);
+                            this.removeUpgrade(0, "translation.horsespy.message.speed", player, horseEntity);
                         } else if (stack.getTag().getInt(TAG_CURRENT_MODE) == 2) {
-                            this.removeUpgrade(1, "Removed 1 Jump Modifier. -> Left " + (HorsesData.getValueById(1, horseEntity) - 1), player, horseEntity);
+                            this.removeUpgrade(1, "translation.horsespy.message.jump", player, horseEntity);
                         } else if (stack.getTag().getInt(TAG_CURRENT_MODE) == 3) {
-                            this.removeUpgrade(2, "Removed 1 Health Modifier. -> Left " + (HorsesData.getValueById(2, horseEntity) - 1), player, horseEntity);
+                            this.removeUpgrade(2, "translation.horsespy.message.health", player, horseEntity);
                         }
                     }
                 }
@@ -114,16 +114,16 @@ public class HorseSpy extends ModItem {
     private void sendStatusFromMode(int id, PlayerEntity playerEntity) {
         switch (id) {
             case 0:
-                playerEntity.sendStatusMessage(new StringTextComponent(TextFormatting.BOLD + " " + TextFormatting.RED + "MODE: " + TextFormatting.RESET + "Show status mode!"), true);
+                playerEntity.sendStatusMessage(new TranslationTextComponent("translation.horsespy.message.mode.one"), true);
                 break;
             case 1:
-                playerEntity.sendStatusMessage(new StringTextComponent(TextFormatting.BOLD + " " + TextFormatting.RED + "MODE: " + TextFormatting.RESET + "Remove Speed Modifier!"), true);
+                playerEntity.sendStatusMessage(new TranslationTextComponent("translation.horsespy.message.mode.two"), true);
                 break;
             case 2:
-                playerEntity.sendStatusMessage(new StringTextComponent(TextFormatting.BOLD + " " + TextFormatting.RED + "MODE: " + TextFormatting.RESET + "Remove Jump Modifier!"), true);
+                playerEntity.sendStatusMessage(new TranslationTextComponent("translation.horsespy.message.mode.three"), true);
                 break;
             case 3:
-                playerEntity.sendStatusMessage(new StringTextComponent(TextFormatting.BOLD + " " + TextFormatting.RED + "MODE: " + TextFormatting.RESET + "Remove Health Modifier!"), true);
+                playerEntity.sendStatusMessage(new TranslationTextComponent("translation.horsespy.message.mode.four"), true);
                 break;
         }
     }
@@ -135,9 +135,9 @@ public class HorseSpy extends ModItem {
             ItemEntity itementity = new ItemEntity(playerEntity.world, playerEntity.posX, playerEntity.posY + 1, playerEntity.posZ, ItemHelper.getStackFromItem(HorsesData.getItemById(id, horseEntity)));
             itementity.setDefaultPickupDelay();
             playerEntity.world.addEntity(itementity);
-            playerEntity.sendMessage(new StringTextComponent(succMessage));
+            playerEntity.sendMessage(new TranslationTextComponent(succMessage).appendText(String.valueOf(HorsesData.getValueById(id, horseEntity))));
         } else {
-            playerEntity.sendMessage(new StringTextComponent("No modifiers to remove."));
+            playerEntity.sendMessage(new TranslationTextComponent("translation.horsespy.message.failmodifier").applyTextStyle(TextFormatting.RED));
         }
     }
 }
