@@ -5,6 +5,7 @@ import com.lazynessmind.horsemodifier.common.items.ModItems;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 
 public class HorsesData {
@@ -13,8 +14,6 @@ public class HorsesData {
     public static final String TAG_SPEED = "Speed";
     public static final String TAG_JUMP = "Jump";
     public static final String TAG_HEALTH = "Health";
-
-    public static CompoundNBT horseData;
 
     public static void saveNewDataToHorse(HorseEntity entity) {
         CompoundNBT compoundNBT = new CompoundNBT();
@@ -37,6 +36,7 @@ public class HorsesData {
     }
 
     //! *************************** Getters and setters ******************************
+
     public static int getSpeed(HorseEntity entity) {
         return getData(entity).getInt(TAG_SPEED);
     }
@@ -104,6 +104,58 @@ public class HorsesData {
         } else if (item == ModItems.HEALTH_CARROT) {
             entity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) - ModConfigs.CARROT_HEALTH_ADD_VALUE.get());
         }
+    }
+
+    public static int getValueById(int id, HorseEntity entity) {
+        switch (id) {
+            case 0:
+                return getSpeed(entity);
+            case 1:
+                return getJump(entity);
+            case 2:
+                return getHealth(entity);
+        }
+        return 0;
+    }
+
+    public static void setValueById(int id, HorseEntity entity, int value) {
+        switch (id) {
+            case 0:
+                setSpeed(entity, value);
+                break;
+            case 1:
+                setJump(entity, value);
+                break;
+            case 2:
+                setHealth(entity, value);
+                break;
+        }
+    }
+
+    public static void setAttrValueById(int id, HorseEntity entity) {
+        switch (id) {
+            case 0:
+                setValueFromItem(ModItems.FLASH_CARROT, entity);
+                break;
+            case 1:
+                setValueFromItem(ModItems.JUMP_CARROT, entity);
+                break;
+            case 2:
+                setValueFromItem(ModItems.HEALTH_CARROT, entity);
+                break;
+        }
+    }
+
+    public static Item getItemById(int id, HorseEntity entity) {
+        switch (id) {
+            case 0:
+                return ModItems.FLASH_CARROT;
+            case 1:
+                return ModItems.JUMP_CARROT;
+            case 2:
+                return ModItems.HEALTH_CARROT;
+        }
+        return Items.AIR;
     }
 }
 
