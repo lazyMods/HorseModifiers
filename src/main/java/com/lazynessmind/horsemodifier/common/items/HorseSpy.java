@@ -101,14 +101,14 @@ public class HorseSpy extends ModItem {
         }
         float health = (float) horseEntity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getValue();
 
-        player.sendMessage(new StringTextComponent(TextFormatting.DARK_PURPLE + "======================================="));
-        player.sendMessage(new StringTextComponent("Speed: " + TextFormatting.GREEN + speed));
-        player.sendMessage(new StringTextComponent("Jump: " + TextFormatting.GREEN + jump));
-        player.sendMessage(new StringTextComponent("Health: " + TextFormatting.GREEN + health));
-        player.sendMessage(new StringTextComponent("SpeedCount: " + TextFormatting.GREEN + HorsesData.getSpeed(horseEntity)));
-        player.sendMessage(new StringTextComponent("JumpCount: " + TextFormatting.GREEN + HorsesData.getJump(horseEntity)));
-        player.sendMessage(new StringTextComponent("HealthCount: " + TextFormatting.GREEN + HorsesData.getHealth(horseEntity)));
-        player.sendMessage(new StringTextComponent(TextFormatting.DARK_PURPLE + "======================================="));
+        player.sendMessage(new StringTextComponent(TextFormatting.DARK_PURPLE + "===================="));
+        player.sendMessage(new TranslationTextComponent("translation.horsespy.message.status.speed").appendText(String.valueOf(speed)));
+        player.sendMessage(new TranslationTextComponent("translation.horsespy.message.status.jump").appendText(String.valueOf(jump)));
+        player.sendMessage(new TranslationTextComponent("translation.horsespy.message.status.health").appendText(String.valueOf(health)));
+        player.sendMessage(new TranslationTextComponent("translation.horsespy.message.status.speedcount").appendText(String.valueOf(HorsesData.getSpeed(horseEntity))));
+        player.sendMessage(new TranslationTextComponent("translation.horsespy.message.status.jumpcount").appendText(String.valueOf(HorsesData.getJump(horseEntity))));
+        player.sendMessage(new TranslationTextComponent("translation.horsespy.message.status.healthcount").appendText(String.valueOf(HorsesData.getHealth(horseEntity))));
+        player.sendMessage(new StringTextComponent(TextFormatting.DARK_PURPLE + "===================="));
     }
 
     private void sendStatusFromMode(int id, PlayerEntity playerEntity) {

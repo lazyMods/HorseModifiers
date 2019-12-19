@@ -27,5 +27,11 @@
   "translation.horsespy.message.mode.one": "§l§cMode: §rShow current status.",
   "translation.horsespy.message.mode.two": "§l§cMode: §rRemove Speed Modifier.",
   "translation.horsespy.message.mode.three": "§l§cMode: §rRemove Jump Modifier.",
-  "translation.horsespy.message.mode.four": "§l§cMode: §rRemove Health Modifier."
+  "translation.horsespy.message.mode.four": "§l§cMode: §rRemove Health Modifier.",
+  "translation.horsespy.message.status.speed": "§l§aSpeed: §r",
+  "translation.horsespy.message.status.jump": "§l§aJump: §r",
+  "translation.horsespy.message.status.health": "§l§aHealth: §r",
+  "translation.horsespy.message.status.speedcount": "§l§aSpeed Modifier Count: §r",
+  "translation.horsespy.message.status.jumpcount": "§l§aJump Modifier Count: §r",
+  "translation.horsespy.message.status.healthcount": "§l§aHealth Modifier Count: §r"
 }
