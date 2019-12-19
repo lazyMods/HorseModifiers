@@ -37,6 +37,7 @@ public class HorseSpy extends ModItem {
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag tooltipFlag) {
         super.addInformation(stack, world, list, tooltipFlag);
         list.add(new TranslationTextComponent("translation.horsespy.tooltip.one").applyTextStyle(TextFormatting.GOLD));
+        list.add(new TranslationTextComponent("translation.horsespy.tooltip.two").applyTextStyle(TextFormatting.RED));
     }
 
     @Override

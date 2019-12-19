@@ -20,6 +20,7 @@
   "translation.jumpcarrot.tooltip.two": "When the limit is reached the affected horse can jump 7 blocks height!!",
 
   "translation.horsespy.tooltip.one": "Sneak Left Click to change the current mode!",
+  "translation.horsespy.tooltip.two": "Right click on a tamed horse to use the modes!",
   "translation.horsespy.message.failmodifier": "No modifiers to remove!",
   "translation.horsespy.message.speed": "Remove one speed modifier. Left ",
   "translation.horsespy.message.jump": "Remove one jump modifier. Left ",
