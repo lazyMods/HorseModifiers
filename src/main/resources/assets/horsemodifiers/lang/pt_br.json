@@ -2,16 +2,37 @@
   "comment_items": "Items:",
   "item.horsemodifiers.healthycarrot": "Cenoura Saudável",
   "item.horsemodifiers.flashcarrot": "Cenoura Flash",
-  "item.horsemodifiers.jumpcarrot": "Cenoura Saltitante"
+  "item.horsemodifiers.jumpcarrot": "Cenoura Saltitante",
+  "item.horsemodifiers.horsespy": "Espiador de Cavalos",
 
   "comment_tabs": "Tabs",
-  "itemGroup.horseTab": "Modificadores de Cavalos",
+  "itemGroup.horseTab": "Modificadores para Cavalos",
 
   "comment_translations": "Translations:",
+
   "translation.flashcarrot.tooltip.one": "Altera o atributo de rapidez!",
   "translation.flashcarrot.tooltip.two": "Quando o limite for alcançado tu precisa prender o cavalo na jaula",
+
   "translation.healthycarrot.tooltip.one": "Altera o atributo de vida!!",
   "translation.healthycarrot.tooltip.two": "Quando o limite for alcançado o cavalo se transforma no HULK!",
+
   "translation.jumpcarrot.tooltip.one": "Altera o atributo de salto!",
-  "translation.jumpcarrot.tooltip.two": "Quando o limite for alcançado o cavalo consegue saltar 7 blocos de altura!!"
+  "translation.jumpcarrot.tooltip.two": "Quando o limite for alcançado o cavalo consegue saltar 7 blocos de altura!!",
+
+  "translation.horsespy.tooltip.one": "Agachar e botão esquerdo do mouse para alterar o modo!",
+  "translation.horsespy.tooltip.two": "Botão esquerdo para utilizar o modo atual.",
+  "translation.horsespy.message.failmodifier": "Sem modificadores para remover!",
+  "translation.horsespy.message.speed": "Removido um modificador de velocidade. Ficam ",
+  "translation.horsespy.message.jump": "Removido um modificador de salto. Ficam ",
+  "translation.horsespy.message.health": "Removido um modificador de vida. Ficam ",
+  "translation.horsespy.message.mode.one": "§l§cModo: §rMostrar os status atuais..",
+  "translation.horsespy.message.mode.two": "§l§cModo: §rRemover Modificador de Velocidade.",
+  "translation.horsespy.message.mode.three": "§l§cModo: §rRemover Modificador de Salto.",
+  "translation.horsespy.message.mode.four": "§l§cMod0: §rRemover Modificador de Vida.",
+  "translation.horsespy.message.status.speed": "§l§cVelocidade: §r",
+  "translation.horsespy.message.status.jump": "§l§cSalto: §r",
+  "translation.horsespy.message.status.health": "§l§cVida: §r",
+  "translation.horsespy.message.status.speedcount": "§l§cNúmero de Modificadores de Velocidade: §r",
+  "translation.horsespy.message.status.jumpcount": "§l§cNúmero de Modificadores de Salto: §r",
+  "translation.horsespy.message.status.healthcount": "§l§cNúmero de Modificadores de Vida: §r"
 }
