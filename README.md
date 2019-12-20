@@ -69,6 +69,17 @@
   * Changed Jump Carrot recipe.
   * Now you can see the attribute value in a GUI format.
   * Updated Forges to 28.1.103
+  
+  **1.2.1**
+  * Updated German translation;
+  
+  **1.2.2**
+  * Horses from previous version will lost the status due to a bug in 1.2.1;
+  * Removed Horse Spy GUI due to many issues with dedicated servers;
+  * Add Horse Spy Item;
+  * New system to remove modifiers and see status
+  * Updated Forge to latest version;
+  * Updated translations: en, pt, de;
       
 </details>
 
@@ -79,7 +90,7 @@
 ## Links:
 
 - **Github:** https://github.com/lazynessmind
-- **Twitter:**  https://twitter.com/lazynessmind
+- **Twitter:**  https://twitter.com/_nesslazy
 - **Twitch:** https://www.twitch.tv/lazynessmind
 
 ### License MIT | Copyright 2019 | lazynessmind

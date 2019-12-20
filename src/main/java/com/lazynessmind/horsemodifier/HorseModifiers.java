@@ -1,7 +1,6 @@
 package com.lazynessmind.horsemodifier;
 
 import com.lazynessmind.horsemodifier.common.configs.ModConfigs;
-import com.lazynessmind.horsemodifier.common.network.PacketHandler;
 import com.lazynessmind.horsemodifier.common.proxy.ClientProxy;
 import com.lazynessmind.horsemodifier.common.proxy.IProxy;
 import com.lazynessmind.horsemodifier.common.proxy.ServerProxy;
@@ -13,8 +12,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @Mod(HorseModifiers.MOD_ID)
 public class HorseModifiers {
@@ -37,6 +34,5 @@ public class HorseModifiers {
     private void setup(final FMLCommonSetupEvent event) {
         tabs.init();
         proxy.init();
-        PacketHandler.init();
     }
 }
