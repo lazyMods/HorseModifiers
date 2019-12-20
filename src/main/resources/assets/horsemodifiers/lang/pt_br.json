@@ -34,5 +34,6 @@
   "translation.horsespy.message.status.health": "§l§cVida: §r",
   "translation.horsespy.message.status.speedcount": "§l§cNúmero de Modificadores de Velocidade: §r",
   "translation.horsespy.message.status.jumpcount": "§l§cNúmero de Modificadores de Salto: §r",
-  "translation.horsespy.message.status.healthcount": "§l§cNúmero de Modificadores de Vida: §r"
+  "translation.horsespy.message.status.healthcount": "§l§cNúmero de Modificadores de Vida: §r",
+  "translation.horsespy.message.tame": "Devias domesticar o cavalo primeiro."
 }

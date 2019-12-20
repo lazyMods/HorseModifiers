@@ -34,5 +34,6 @@
   "translation.horsespy.message.status.health": "§l§cHealth: §r",
   "translation.horsespy.message.status.speedcount": "§l§cSpeed Modifier Count: §r",
   "translation.horsespy.message.status.jumpcount": "§l§cJump Modifier Count: §r",
-  "translation.horsespy.message.status.healthcount": "§l§cHealth Modifier Count: §r"
+  "translation.horsespy.message.status.healthcount": "§l§cHealth Modifier Count: §r",
+  "translation.horsespy.message.tame": "You should tame the horse first, just saying..."
 }

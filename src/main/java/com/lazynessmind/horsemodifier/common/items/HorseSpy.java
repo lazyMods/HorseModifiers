@@ -60,6 +60,8 @@ public class HorseSpy extends ModItem {
                             this.removeUpgrade(2, "translation.horsespy.message.health", player, horseEntity);
                         }
                     }
+                } else {
+                    player.sendMessage(new TranslationTextComponent("translation.horsespy.message.tame").applyTextStyle(TextFormatting.RED));
                 }
             }
         }
