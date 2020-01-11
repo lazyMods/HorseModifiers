@@ -1,9 +1,9 @@
 modLoader="javafml" #mandatory
-loaderVersion="[28,)" #mandatory
+loaderVersion="[30,)" #mandatory
 issueTrackerURL="https://github.com/lazynessmind/HorseModifiers/issues" #optional
 [[mods]] #mandatory
 modId="horsemodifiers" #mandatory
-version="1.2.2" #mandatory
+version="1.0" #mandatory
 displayName="Horse Modifiers" #mandatory
 updateJSONURL="https://raw.githubusercontent.com/lazynessmind/HorseModifiers/master/update.json" #optional
 displayURL="https://www.curseforge.com/minecraft/mc-mods/horse-modifiers" #optional TODO
