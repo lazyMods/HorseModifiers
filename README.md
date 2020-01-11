@@ -80,6 +80,9 @@
   * New system to remove modifiers and see status
   * Updated Forge to latest version;
   * Updated translations: en, pt, de;
+  
+  **1.0:**
+  * Updated to 1.15.1
       
 </details>
 
