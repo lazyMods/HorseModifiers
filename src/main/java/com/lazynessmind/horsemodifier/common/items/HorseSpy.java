@@ -2,6 +2,7 @@ package com.lazynessmind.horsemodifier.common.items;
 
 import com.lazynessmind.horsemodifier.common.horsedata.HorsesData;
 import com.lazynessmind.horsemodifier.common.util.ItemHelper;
+import com.sun.javafx.geom.Vec3f;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -14,6 +15,7 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -72,7 +74,8 @@ public class HorseSpy extends ModItem {
     public ActionResultType onItemUse(ItemUseContext context) {
 
         if (!context.getWorld().isRemote) {
-            if (context.getPlayer().isSneaking()) {
+            //Is Sneaking
+            if (context.getPlayer().func_225608_bj_()) {
                 if (this.currentMode < 3) this.currentMode++;
                 else this.currentMode = 0;
                 this.createTag(context.getItem());
@@ -135,7 +138,8 @@ public class HorseSpy extends ModItem {
         if ((HorsesData.getValueById(id, horseEntity) - 1) >= 0) {
             HorsesData.setValueById(id, horseEntity, HorsesData.getValueById(id, horseEntity) - 1);
             HorsesData.setAttrValueById(id, horseEntity);
-            ItemEntity itementity = new ItemEntity(playerEntity.world, playerEntity.posX, playerEntity.posY + 1, playerEntity.posZ, ItemHelper.getStackFromItem(HorsesData.getItemById(id, horseEntity)));
+            Vec3d playerPos = playerEntity.getPositionVec();
+            ItemEntity itementity = new ItemEntity(playerEntity.world, playerPos.x, playerPos.y + 1, playerPos.z, ItemHelper.getStackFromItem(HorsesData.getItemById(id, horseEntity)));
             itementity.setDefaultPickupDelay();
             playerEntity.world.addEntity(itementity);
             playerEntity.sendMessage(new TranslationTextComponent(succMessage).appendText(String.valueOf(HorsesData.getValueById(id, horseEntity))));
