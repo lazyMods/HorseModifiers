@@ -8,7 +8,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/lazynessmind/HorseModifiers.svg">
   
-  <a href="https://github.com/lazynessmind/HorseModifiers/commits/master">
+  <a href="https://github.com/lazynessmind/HorseModifiers/commits/1.15.1">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lazynessmind/HorseModifiers.svg">
   </a>
 
@@ -37,49 +37,6 @@
 
 <details>
   <summary>Click to see:</summary>
-  
-  **1.0**
-  * First release;
-  
-  **1.0.1**
-  * Fix: carrots could not stack together, even if the carrot was the same type;
-  * Fix: set version in the mod info file.
-  * Fix: pack.mcmeta
-  * Updated Forge to latest version;
-  
-  **1.1**
-  * Updated Forge to latest version;
-  * Added Horse Spy;
-  
-  **1.1.1**
-  * Updated Forge to latest version;
-  * Fix: Now the carrots can be applied to all types of Horses;
-  * Fix: Update message not showing. (Can be disabled on configs)
-  * Added Germany translation - https://github.com/pandory-network
-  
-  **1.1.2**
-  * Updated Forge to latest version;
-  * Idea: added config to limiters (now you can change the max value to speed and jump attribute) - Thanks *neqaden*;
-  * Fix: Every text on the mod can be translated.
-  * Added Portuguese translation.
-  
-  **1.2.0**
-  * Removed Horse Spy.
-  * Redone modifiers system.
-  * Changed Jump Carrot recipe.
-  * Now you can see the attribute value in a GUI format.
-  * Updated Forges to 28.1.103
-  
-  **1.2.1**
-  * Updated German translation;
-  
-  **1.2.2**
-  * Horses from previous version will lost the status due to a bug in 1.2.1;
-  * Removed Horse Spy GUI due to many issues with dedicated servers;
-  * Add Horse Spy Item;
-  * New system to remove modifiers and see status
-  * Updated Forge to latest version;
-  * Updated translations: en, pt, de;
   
   **1.0:**
   * Updated to 1.15.1
