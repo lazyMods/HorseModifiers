@@ -21,7 +21,7 @@ archivesBaseName = 'horsemodifiers'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: 'snapshot', version: '20191205-1.14.3'
+    mappings channel: "${mcp_mappings_channel}", version: "${mcp_mappings_version}"
     runs {
         client {
             workingDirectory project.file('run')

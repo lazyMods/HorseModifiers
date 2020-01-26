@@ -40,6 +40,10 @@
   
   **1.0:**
   * Updated to 1.15.1
+  
+  **1.1:**
+  * Updated to the latest version of forge.
+  * Fix error that prevents mod to load on Forge 30.0.51
       
 </details>
 
