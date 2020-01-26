@@ -74,8 +74,8 @@ public class HorseSpy extends ModItem {
     public ActionResultType onItemUse(ItemUseContext context) {
 
         if (!context.getWorld().isRemote) {
-            //Is Sneaking
-            if (context.getPlayer().func_225608_bj_()) {
+            //Is Sneaking 1.14.4 - Is Shift Key Down ??? 😒
+            if (context.getPlayer().isShiftKeyDown()) {
                 if (this.currentMode < 3) this.currentMode++;
                 else this.currentMode = 0;
                 this.createTag(context.getItem());
