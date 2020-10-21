@@ -1,9 +1,9 @@
 {
   "comment_items": "Items:",
-  "item.horsemodifiers.healthycarrot": "Karotte der Gesundheit",
-  "item.horsemodifiers.flashcarrot": "Karotte der Geschwindigkeit",
-  "item.horsemodifiers.jumpcarrot": "Karotte der Sprungkraft",
-  "item.horsemodifiers.horsespy": "Pferdelupe",
+  "item.horsemodifiers.healthy_carrot": "Karotte der Gesundheit",
+  "item.horsemodifiers.flash_carrot": "Karotte der Geschwindigkeit",
+  "item.horsemodifiers.jump_carrot": "Karotte der Sprungkraft",
+  "item.horsemodifiers.horse_spy": "Pferdelupe",
 
   "comment_tabs": "Kategorien",
   "itemGroup.horseTab": "Horse Modifiers",

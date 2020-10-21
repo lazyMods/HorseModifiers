@@ -1,8 +1,8 @@
-package com.lazynessmind.horsemodifier.common.horsedata;
+package com.lazynessmind.horsemodifier.horsedata;
 
-import com.lazynessmind.horsemodifier.common.configs.ModConfigs;
-import com.lazynessmind.horsemodifier.common.items.ModItems;
-import net.minecraft.entity.SharedMonsterAttributes;
+import com.lazynessmind.horsemodifier.Configs;
+import com.lazynessmind.horsemodifier.items.ModItems;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -68,11 +68,11 @@ public class HorsesData {
     public static double getAttrValue(HorseEntity entity, int index) {
         switch (index) {
             case 0:
-                return entity.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getValue();
+                return entity.getAttribute(Attributes.MOVEMENT_SPEED).getValue();
             case 1:
-                return entity.getAttributes().getAttributeInstanceByName("horse.jumpStrength").getValue();
+                return entity.getAttribute(Attributes.HORSE_JUMP_STRENGTH).getValue();
             case 2:
-                return entity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).getValue();
+                return entity.getAttribute(Attributes.MAX_HEALTH).getValue();
         }
         return 6.9D;
     }
@@ -84,25 +84,25 @@ public class HorsesData {
     public static void increaseAttrValue(HorseEntity entity, int index) {
         switch (index) {
             case 0:
-                entity.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(getAttrValue(entity, 0) + ModConfigs.CARROT_SPEED_ADD_VALUE.get());
+                entity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(getAttrValue(entity, 0) + Configs.CARROT_SPEED_ADD_VALUE.get());
                 break;
             case 1:
-                entity.getAttributes().getAttributeInstanceByName("horse.jumpStrength").setBaseValue(getAttrValue(entity, 1) + ModConfigs.CARROT_JUMP_ADD_VALUE.get());
+                entity.getAttribute(Attributes.HORSE_JUMP_STRENGTH).setBaseValue(getAttrValue(entity, 1) + Configs.CARROT_JUMP_ADD_VALUE.get());
                 break;
             case 2:
-                entity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) + ModConfigs.CARROT_HEALTH_ADD_VALUE.get());
+                entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) + Configs.CARROT_HEALTH_ADD_VALUE.get());
                 break;
         }
     }
 
     //! Used on the RemovedModifierUpgrade to change the value.
     public static void setValueFromItem(Item item, HorseEntity entity) {
-        if (item == ModItems.FLASH_CARROT) {
-            entity.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(getAttrValue(entity, 0) - ModConfigs.CARROT_SPEED_ADD_VALUE.get());
-        } else if (item == ModItems.JUMP_CARROT) {
-            entity.getAttributes().getAttributeInstanceByName("horse.jumpStrength").setBaseValue(getAttrValue(entity, 1) - ModConfigs.CARROT_JUMP_ADD_VALUE.get());
-        } else if (item == ModItems.HEALTH_CARROT) {
-            entity.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) - ModConfigs.CARROT_HEALTH_ADD_VALUE.get());
+        if (item == ModItems.FLASH_CARROT.get()) {
+            entity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(getAttrValue(entity, 0) - Configs.CARROT_SPEED_ADD_VALUE.get());
+        } else if (item == ModItems.JUMP_CARROT.get()) {
+            entity.getAttribute(Attributes.HORSE_JUMP_STRENGTH).setBaseValue(getAttrValue(entity, 1) - Configs.CARROT_JUMP_ADD_VALUE.get());
+        } else if (item == ModItems.HEALTH_CARROT.get()) {
+            entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) - Configs.CARROT_HEALTH_ADD_VALUE.get());
         }
     }
 
@@ -135,25 +135,25 @@ public class HorsesData {
     public static void setAttrValueById(int id, HorseEntity entity) {
         switch (id) {
             case 0:
-                setValueFromItem(ModItems.FLASH_CARROT, entity);
+                setValueFromItem(ModItems.FLASH_CARROT.get(), entity);
                 break;
             case 1:
-                setValueFromItem(ModItems.JUMP_CARROT, entity);
+                setValueFromItem(ModItems.JUMP_CARROT.get(), entity);
                 break;
             case 2:
-                setValueFromItem(ModItems.HEALTH_CARROT, entity);
+                setValueFromItem(ModItems.HEALTH_CARROT.get(), entity);
                 break;
         }
     }
 
-    public static Item getItemById(int id, HorseEntity entity) {
+    public static Item getItemById(int id) {
         switch (id) {
             case 0:
-                return ModItems.FLASH_CARROT;
+                return ModItems.FLASH_CARROT.get();
             case 1:
-                return ModItems.JUMP_CARROT;
+                return ModItems.JUMP_CARROT.get();
             case 2:
-                return ModItems.HEALTH_CARROT;
+                return ModItems.HEALTH_CARROT.get();
         }
         return Items.AIR;
     }

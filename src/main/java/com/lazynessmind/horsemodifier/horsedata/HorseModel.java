@@ -1,4 +1,4 @@
-package com.lazynessmind.horsemodifier.common.horsedata;
+package com.lazynessmind.horsemodifier.horsedata;
 
 public class HorseModel {
 

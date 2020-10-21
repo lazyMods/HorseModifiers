@@ -1,9 +1,9 @@
 {
   "comment_items": "Items:",
-  "item.horsemodifiers.healthycarrot": "Cenoura Saudável",
-  "item.horsemodifiers.flashcarrot": "Cenoura Flash",
-  "item.horsemodifiers.jumpcarrot": "Cenoura Saltitante",
-  "item.horsemodifiers.horsespy": "Espiador de Cavalos",
+  "item.horsemodifiers.healthy_carrot": "Cenoura Saudável",
+  "item.horsemodifiers.flash_carrot": "Cenoura Flash",
+  "item.horsemodifiers.jump_carrot": "Cenoura Saltitante",
+  "item.horsemodifiers.horse_spy": "Espiador de Cavalos",
 
   "comment_tabs": "Tabs",
   "itemGroup.horseTab": "Modificadores para Cavalos",

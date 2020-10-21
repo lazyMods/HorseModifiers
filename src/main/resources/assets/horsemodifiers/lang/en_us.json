@@ -1,9 +1,9 @@
 {
   "comment_items": "Items:",
-  "item.horsemodifiers.healthycarrot": "Healthy Carrot",
-  "item.horsemodifiers.flashcarrot": "Flash Carrot",
-  "item.horsemodifiers.jumpcarrot": "Jump Carrot",
-  "item.horsemodifiers.horsespy": "Horse Spy",
+  "item.horsemodifiers.healthy_carrot": "Healthy Carrot",
+  "item.horsemodifiers.flash_carrot": "Flash Carrot",
+  "item.horsemodifiers.jump_carrot": "Jump Carrot",
+  "item.horsemodifiers.horse_spy": "Horse Spy",
 
   "comment_tabs": "Tabs",
   "itemGroup.horseTab": "Horse Modifiers",

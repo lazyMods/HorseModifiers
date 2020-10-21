@@ -1,4 +1,4 @@
-package com.lazynessmind.horsemodifier.common.util;
+package com.lazynessmind.horsemodifier.util;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
