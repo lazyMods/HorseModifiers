@@ -25,6 +25,10 @@
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+  
+  <a href="https://twitter.com/nesslazy_">
+    <img alt="Repository issues" src="https://img.shields.io/twitter/follow/nesslazy_?label=pls%20follow&style=social">
+  </a>
 </p>
 
 ## Description:
