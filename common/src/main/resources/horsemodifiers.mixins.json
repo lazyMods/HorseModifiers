@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "lazy.horsemodifiers.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7.11",
+  "client": [
+  ],
+  "mixins": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

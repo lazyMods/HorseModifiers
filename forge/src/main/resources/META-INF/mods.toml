@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "[35,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "horsemodifiers"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/horse-modifiers"
+version = "${version}"
+displayName = "Horse Modifiers"
+authors = "lazy"
+description = '''
+Horses can be bred among themselves to create a better horse, so this mod changes this by adding carrots that alter the horse's attributes.
+'''
+#logoFile = ""
+
+[[dependencies.horsemodifiers]]
+modId = "forge"
+mandatory = true
+versionRange = "[35,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.horsemodifiers]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.16.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.horsemodifiers]]
+modId = "architectury"
+mandatory = true
+versionRange = "[1.1.55,)"
+ordering = "AFTER"
+side = "BOTH"

@@ -1,0 +1,39 @@
+{
+  "comment_items": "Items:",
+  "item.horsemodifiers.healthy_carrot": "Healthy Carrot",
+  "item.horsemodifiers.flash_carrot": "Flash Carrot",
+  "item.horsemodifiers.jump_carrot": "Jump Carrot",
+  "item.horsemodifiers.horse_spy": "Horse Spy",
+
+  "comment_tabs": "Tabs",
+  "itemGroup.horseTab": "Horse Modifiers",
+
+  "comment_translations": "Translations:",
+
+  "translation.flashcarrot.tooltip.one": "Changes the speed attribute!",
+  "translation.flashcarrot.tooltip.two": "When the limit is reached you need to lock the horse in a cell!",
+
+  "translation.healthycarrot.tooltip.one": "Changes the health attribute!",
+  "translation.healthycarrot.tooltip.two": "When the limit is reached the horse becomes the HULK!",
+
+  "translation.jumpcarrot.tooltip.one": "Changes the jump attribute!",
+  "translation.jumpcarrot.tooltip.two": "When the limit is reached the affected horse can jump 7 blocks height!!",
+
+  "translation.horsespy.tooltip.one": "Sneak Left Click to change the current mode!",
+  "translation.horsespy.tooltip.two": "Left Click on a tamed horse to use the modes!",
+  "translation.horsespy.message.failmodifier": "No modifiers to remove!",
+  "translation.horsespy.message.speed": "Remove one speed modifier. Left ",
+  "translation.horsespy.message.jump": "Remove one jump modifier. Left ",
+  "translation.horsespy.message.health": "Remove one health modifier. Left ",
+  "translation.horsespy.message.mode.one": "§l§cMode: §rShow current status.",
+  "translation.horsespy.message.mode.two": "§l§cMode: §rRemove Speed Modifier.",
+  "translation.horsespy.message.mode.three": "§l§cMode: §rRemove Jump Modifier.",
+  "translation.horsespy.message.mode.four": "§l§cMode: §rRemove Health Modifier.",
+  "translation.horsespy.message.status.speed": "§l§cSpeed: §r",
+  "translation.horsespy.message.status.jump": "§l§cJump: §r",
+  "translation.horsespy.message.status.health": "§l§cHealth: §r",
+  "translation.horsespy.message.status.speedcount": "§l§cSpeed Modifier Count: §r",
+  "translation.horsespy.message.status.jumpcount": "§l§cJump Modifier Count: §r",
+  "translation.horsespy.message.status.healthcount": "§l§cHealth Modifier Count: §r",
+  "translation.horsespy.message.tame": "You should tame the horse first, just saying..."
+}
