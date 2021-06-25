@@ -12,6 +12,9 @@ architectury {
 }
 
 loom {
+    dataGen {
+        mod "horsemodifiers"
+    }
     mixinConfig("horsemodifiers.mixins.json")
     useFabricMixin = true
 }
