@@ -1,6 +1,6 @@
 package lazy.horsemodifiers.items.carrots;
 
-import lazy.horsemodifiers.Ref;
+import lazy.horsemodifiers.util.Ref;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;

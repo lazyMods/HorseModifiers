@@ -1,7 +1,7 @@
 package lazy.horsemodifiers.items;
 
-import lazy.horsemodifiers.Ref;
-import lazy.horsemodifiers.horsedata.HorsesData;
+import lazy.horsemodifiers.util.Ref;
+import lazy.horsemodifiers.util.HorseData;
 import lazy.horsemodifiers.util.ItemHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
@@ -103,9 +103,9 @@ public class HorseSpy extends Item {
         player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.speed").append(String.valueOf(speed)), player.getUUID());
         player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.jump").append(String.valueOf(jump)), player.getUUID());
         player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.health").append(String.valueOf(health)), player.getUUID());
-        player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.speedcount").append(String.valueOf(HorsesData.getSpeed(horseEntity))), player.getUUID());
-        player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.jumpcount").append(String.valueOf(HorsesData.getJump(horseEntity))), player.getUUID());
-        player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.healthcount").append(String.valueOf(HorsesData.getHealth(horseEntity))), player.getUUID());
+        player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.speedcount").append(String.valueOf(HorseData.getSpeed(horseEntity))), player.getUUID());
+        player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.jumpcount").append(String.valueOf(HorseData.getJump(horseEntity))), player.getUUID());
+        player.sendMessage(new TranslatableComponent("translation.horsespy.message.status.healthcount").append(String.valueOf(HorseData.getHealth(horseEntity))), player.getUUID());
         player.sendMessage(new TextComponent(ChatFormatting.DARK_PURPLE + "===================="), player.getUUID());
     }
 
@@ -126,15 +126,15 @@ public class HorseSpy extends Item {
         }
     }
 
-    private void removeUpgrade(int id, String succMessage, Player playerEntity, Horse horseEntity) {
-        if ((HorsesData.getValueById(id, horseEntity) - 1) >= 0) {
-            HorsesData.setValueById(id, horseEntity, HorsesData.getValueById(id, horseEntity) - 1);
-            HorsesData.setAttrValueById(id, horseEntity);
+    private void removeUpgrade(int id, String successMessage, Player playerEntity, Horse horseEntity) {
+        if ((HorseData.getValueById(id, horseEntity) - 1) >= 0) {
+            HorseData.setValueById(id, horseEntity, HorseData.getValueById(id, horseEntity) - 1);
+            HorseData.setAttrValueById(id, horseEntity);
             Vec3 playerPos = playerEntity.position();
-            ItemEntity itementity = new ItemEntity(playerEntity.level, playerPos.x, playerPos.y + 1, playerPos.z, ItemHelper.getStackFromItem(HorsesData.getItemById(id)));
+            ItemEntity itementity = new ItemEntity(playerEntity.level, playerPos.x, playerPos.y + 1, playerPos.z, ItemHelper.getStackFromItem(HorseData.getItemById(id)));
             itementity.setDefaultPickUpDelay();
             playerEntity.level.addFreshEntity(itementity);
-            playerEntity.sendMessage(new TranslatableComponent(succMessage).append(String.valueOf(HorsesData.getValueById(id, horseEntity))), playerEntity.getUUID());
+            playerEntity.sendMessage(new TranslatableComponent(successMessage).append(String.valueOf(HorseData.getValueById(id, horseEntity))), playerEntity.getUUID());
         } else {
             playerEntity.sendMessage(new TranslatableComponent("translation.horsespy.message.failmodifier").withStyle(ChatFormatting.RED), playerEntity.getUUID());
         }

@@ -1,10 +1,10 @@
-package lazy.horsemodifiers.register;
+package lazy.horsemodifiers;
 
-import lazy.horsemodifiers.HorseModifiers;
 import lazy.horsemodifiers.items.HorseSpy;
 import lazy.horsemodifiers.items.carrots.FlashCarrot;
 import lazy.horsemodifiers.items.carrots.HealthyCarrot;
 import lazy.horsemodifiers.items.carrots.JumpCarrot;
+import lazy.horsemodifiers.util.Ref;
 import me.shedaniel.architectury.registry.DeferredRegister;
 import me.shedaniel.architectury.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
@@ -13,7 +13,7 @@ import net.minecraft.world.item.Item;
 @SuppressWarnings("unused")
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(HorseModifiers.MOD_ID, Registry.ITEM_REGISTRY);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Ref.MOD_ID, Registry.ITEM_REGISTRY);
 
     public static final RegistrySupplier<Item> HEALTH_CARROT = ITEMS.register("healthy_carrot", HealthyCarrot::new);
     public static final RegistrySupplier<Item> FLASH_CARROT = ITEMS.register("flash_carrot", FlashCarrot::new);

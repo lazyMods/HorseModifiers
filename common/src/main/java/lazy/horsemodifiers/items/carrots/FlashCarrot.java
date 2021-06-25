@@ -1,6 +1,8 @@
 package lazy.horsemodifiers.items.carrots;
 
-import lazy.horsemodifiers.horsedata.HorsesData;
+import lazy.horsemodifiers.ModConfigs;
+import lazy.horsemodifiers.util.HorseData;
+import me.shedaniel.architectury.platform.Mod;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -26,10 +28,10 @@ public class FlashCarrot extends Carrot {
 
     @Override
     public boolean changeAttributes(Horse entity, Player playerEntity) {
-        if (HorsesData.getSpeed(entity) < 1/*Configs.MAX_MODIFIERS_VALUE.get()*/) {
+        if (HorseData.getSpeed(entity) < ModConfigs.maxModifierCount.get()) {
             entity.playSound(SoundEvents.EXPERIENCE_ORB_PICKUP, SoundType.CROP.getVolume() * 0.6F, SoundType.CROP.getPitch());
-            HorsesData.setSpeed(entity, HorsesData.getSpeed(entity) + 1);
-            HorsesData.increaseAttrValue(entity, 0);
+            HorseData.setSpeed(entity, HorseData.getSpeed(entity) + 1);
+            HorseData.increaseAttrValue(entity, 0);
             return true;
         }
         return false;

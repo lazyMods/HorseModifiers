@@ -1,6 +1,7 @@
 package lazy.horsemodifiers.items.carrots;
 
-import lazy.horsemodifiers.horsedata.HorsesData;
+import lazy.horsemodifiers.ModConfigs;
+import lazy.horsemodifiers.util.HorseData;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -26,10 +27,10 @@ public class HealthyCarrot extends Carrot {
 
     @Override
     public boolean changeAttributes(Horse entity, Player playerEntity) {
-        if (HorsesData.getHealth(entity) < 1/*Configs.MAX_MODIFIERS_VALUE.get()*/) {
+        if (HorseData.getHealth(entity) < ModConfigs.maxModifierCount.get()) {
             entity.playSound(SoundEvents.EXPERIENCE_ORB_PICKUP, SoundType.CROP.getVolume() * 0.6F, SoundType.CROP.getPitch());
-            HorsesData.setHealth(entity, HorsesData.getHealth(entity) + 1);
-            HorsesData.increaseAttrValue(entity, 2);
+            HorseData.setHealth(entity, HorseData.getHealth(entity) + 1);
+            HorseData.increaseAttrValue(entity, 2);
             return true;
         } else {
             return false;
