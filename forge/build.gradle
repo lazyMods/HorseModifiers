@@ -12,8 +12,8 @@ architectury {
 }
 
 loom {
-    useFabricMixin = true
     mixinConfig("horsemodifiers.mixins.json")
+    useFabricMixin = true
 }
 
 dependencies {

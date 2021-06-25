@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[35,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/lazyMods/horse-modifiers/issues"
 license = "MIT"
 
 [[mods]]
@@ -12,7 +12,7 @@ authors = "lazy"
 description = '''
 Horses can be bred among themselves to create a better horse, so this mod changes this by adding carrots that alter the horse's attributes.
 '''
-#logoFile = ""
+logoFile = "../logo.png"
 
 [[dependencies.horsemodifiers]]
 modId = "forge"
