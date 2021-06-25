@@ -6,7 +6,8 @@
   "client": [
   ],
   "mixins": [
-
+    "HorseMixin",
+    "RunAroundLikeCrazyGoalMixin"
   ],
   "injectors": {
     "defaultRequire": 1
