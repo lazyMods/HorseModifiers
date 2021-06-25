@@ -6,7 +6,7 @@
   "item.horsemodifiers.horse_spy": "Pferdelupe",
 
   "comment_tabs": "Kategorien",
-  "itemGroup.horseTab": "Horse Modifiers",
+  "itemGroup.horsemodifiers.general": "Horse Modifiers",
 
   "comment_translations": "Übersetzungen:",
   "translation.flashcarrot.tooltip.one": "Ändert die Geschwindigkeit.",
