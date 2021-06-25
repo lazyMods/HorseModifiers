@@ -3,20 +3,21 @@
   "id": "horsemodifiers",
   "version": "${version}",
   "name": "Horse Modifiers",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Horses can be bred among themselves to create a better horse, so this mod changes this by adding carrots that alter the horse's attributes.",
   "authors": [
     "lazy"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/horse-modifiers",
+    "sources": "https://github.com/lazyMods/horse-modifiers",
+    "issues": "https://github.com/lazyMods/horse-modifiers/issues"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "MIT",
+  "icon": "assets/horsemodifiers/logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "lazy.horsemodifiers.fabric.HorseModifiersFabric"
+      "lazy.horsemodifiers.platform.HorseModifiersFabric"
     ]
   },
   "depends": {
