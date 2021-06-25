@@ -1,40 +1,40 @@
-package lazy.horsemodifiers.horsedata;
+package lazy.horsemodifiers.util;
 
-import lazy.horsemodifiers.register.ModItems;
+import lazy.horsemodifiers.ModConfigs;
+import lazy.horsemodifiers.ModItems;
+import lazy.horsemodifiers.extension.HorseExtension;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
-public class HorsesData {
+public class HorseData {
 
-    public static final String TAG = "HM";
+    public static final String TAG = "HorseModifiers";
     public static final String TAG_SPEED = "Speed";
     public static final String TAG_JUMP = "Jump";
     public static final String TAG_HEALTH = "Health";
 
-    public static void saveNewDataToHorse(Horse entity) {
+    public static void saveNewDataToHorse(Horse horse) {
         CompoundTag tag = new CompoundTag();
         tag.putInt(TAG_SPEED, 0);
         tag.putInt(TAG_JUMP, 0);
         tag.putInt(TAG_HEALTH, 0);
-        //entity.getPersistentData().put(TAG, tag);
+        ((HorseExtension) horse).saveData(tag);
     }
 
-    public static void saveDataToHorse(Horse entity, int speed, int jump, int health) {
-        CompoundTag tag = new CompoundTag()/*entity.getPersistentData().getCompound(TAG)*/;
+    public static void saveDataToHorse(Horse horse, int speed, int jump, int health) {
+        CompoundTag tag = new CompoundTag();
         tag.putInt(TAG_SPEED, speed);
         tag.putInt(TAG_JUMP, jump);
         tag.putInt(TAG_HEALTH, health);
-        //entity.get.put(TAG, tag);
+        ((HorseExtension) horse).saveData(tag);
     }
 
-    public static CompoundTag getData(Horse entity) {
-        return new CompoundTag()/*entity.getPersistentData().getCompound(TAG)*/;
+    public static CompoundTag getData(Horse horse) {
+        return ((HorseExtension) horse).getCustomData().getCompound(TAG);
     }
-
-    //! *************************** Getters and setters ******************************
 
     public static int getSpeed(Horse entity) {
         return getData(entity).getInt(TAG_SPEED);
@@ -60,10 +60,6 @@ public class HorsesData {
         saveDataToHorse(Horse, getSpeed(Horse), getJump(Horse), newValue);
     }
 
-    //! Get the current attributes on the horse
-    //* 0 - Speed
-    //? 1 - Jump
-    //+ 2 - Health
     public static double getAttrValue(Horse entity, int index) {
         switch (index) {
             case 0:
@@ -76,32 +72,27 @@ public class HorsesData {
         return 6.9D;
     }
 
-    //! Increases the attribute value
-    //* 0 - Speed
-    //? 1 - Jump
-    //+ 2 - Health
     public static void increaseAttrValue(Horse entity, int index) {
         switch (index) {
             case 0:
-                entity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(getAttrValue(entity, 0) /*+ Configs.CARROT_SPEED_ADD_VALUE.get()*/);
+                entity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(getAttrValue(entity, 0) + ModConfigs.flashCarrotIncrease.get());
                 break;
             case 1:
-                entity.getAttribute(Attributes.JUMP_STRENGTH).setBaseValue(getAttrValue(entity, 1) /*+ Configs.CARROT_JUMP_ADD_VALUE.get()*/);
+                entity.getAttribute(Attributes.JUMP_STRENGTH).setBaseValue(getAttrValue(entity, 1) + ModConfigs.jumpCarrotIncrease.get());
                 break;
             case 2:
-                entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) /*+ Configs.CARROT_HEALTH_ADD_VALUE.get()*/);
+                entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) + ModConfigs.healthyCarrotIncrease.get());
                 break;
         }
     }
 
-    //! Used on the RemovedModifierUpgrade to change the value.
     public static void setValueFromItem(Item item, Horse entity) {
         if (item == ModItems.FLASH_CARROT.get()) {
-            entity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(getAttrValue(entity, 0) /*- Configs.CARROT_SPEED_ADD_VALUE.get()*/);
+            entity.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(getAttrValue(entity, 0) - ModConfigs.flashCarrotIncrease.get());
         } else if (item == ModItems.JUMP_CARROT.get()) {
-            entity.getAttribute(Attributes.JUMP_STRENGTH).setBaseValue(getAttrValue(entity, 1) /*- Configs.CARROT_JUMP_ADD_VALUE.get()*/);
+            entity.getAttribute(Attributes.JUMP_STRENGTH).setBaseValue(getAttrValue(entity, 1) - ModConfigs.jumpCarrotIncrease.get());
         } else if (item == ModItems.HEALTH_CARROT.get()) {
-            entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) /*- Configs.CARROT_HEALTH_ADD_VALUE.get()*/);
+            entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(getAttrValue(entity, 2) - ModConfigs.healthyCarrotIncrease.get());
         }
     }
 
