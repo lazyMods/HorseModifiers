@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "aaa",
-    "aba",
-    "aaa"
+    "iii",
+    "ici",
+    "iii"
   ],
   "key": {
-    "a": {
+    "i": {
       "item": "minecraft:piston"
     },
-    "b" : {
+    "c": {
       "item": "minecraft:golden_carrot"
     }
   },
   "result": {
-    "item": "horsemodifiers:jumpcarrot",
-    "count": 1
+    "item": "horsemodifiers:jump_carrot"
   }
 }

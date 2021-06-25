@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "  a",
-    " b ",
-    "b  "
+    "  b",
+    " a ",
+    "a  "
   ],
   "key": {
     "a": {
-      "item": "minecraft:glass"
-    },
-    "b" : {
       "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:glass"
     }
   },
   "result": {
-    "item": "horsemodifiers:horsespy",
-    "count": 1
+    "item": "horsemodifiers:horse_spy"
   }
 }
