@@ -18,6 +18,9 @@
   "entrypoints": {
     "main": [
       "lazy.horsemodifiers.platform.HorseModifiersFabric"
+    ],
+    "modmenu": [
+      "lazy.horsemodifiers.platform.ModMenuEntry"
     ]
   },
   "depends": {
