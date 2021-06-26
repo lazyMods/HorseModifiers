@@ -1,4 +1,4 @@
-package lazy.horsemodifiers;
+package lazy.horsemodifiers.screen;
 
 import com.electronwill.nightconfig.core.CommentedConfig;
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
@@ -48,7 +48,6 @@ public class ModConfigs {
             CommentedConfig config = CommentedConfig.inMemory();
             TomlWriter writer = new TomlWriter();
             writer.write(config, CONFIG_PATH.toFile(), WritingMode.REPLACE);
-
         }
     }
 
@@ -68,6 +67,14 @@ public class ModConfigs {
         public ConfigEntry<T> comment(String comment) {
             this.config.setComment(this.path, comment);
             return this;
+        }
+
+        public void save(T newValue){
+            CommentedFileConfig config = CommentedFileConfig.builder(CONFIG_PATH).build();
+            config.load();
+            config.update(path, newValue);
+            config.save();
+            config.close();
         }
 
         public T get() {

@@ -1,6 +1,6 @@
 package lazy.horsemodifiers.util;
 
-import lazy.horsemodifiers.ModConfigs;
+import lazy.horsemodifiers.screen.ModConfigs;
 import lazy.horsemodifiers.ModItems;
 import lazy.horsemodifiers.extension.HorseExtension;
 import net.minecraft.nbt.CompoundTag;

@@ -1,6 +1,6 @@
 package lazy.horsemodifiers.items.carrots;
 
-import lazy.horsemodifiers.ModConfigs;
+import lazy.horsemodifiers.screen.ModConfigs;
 import lazy.horsemodifiers.util.HorseData;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
