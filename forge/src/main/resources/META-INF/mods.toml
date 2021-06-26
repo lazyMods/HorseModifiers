@@ -12,7 +12,7 @@ authors = "lazy"
 description = '''
 Horses can be bred among themselves to create a better horse, so this mod changes this by adding carrots that alter the horse's attributes.
 '''
-logoFile = "../logo.png"
+logoFile = "logo.png"
 
 [[dependencies.horsemodifiers]]
 modId = "forge"
