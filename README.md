@@ -37,24 +37,6 @@
     
   * Showcase Video - https://www.youtube.com/watch?v=I7mTPfNSDEc
 
-## Changelog:
-
-<details>
-  <summary>Click to see:</summary>
-  
-  **1.0:**
-  * Updated to 1.15.1
-  
-  **1.1:**
-  * Updated to the latest version of forge.
-  * Fix error that prevents mod to load on Forge 30.0.51
-  
-  **1.2:**
-  * Updated Forge to the latest version;
-  * Now supporting 1.15.2;
-      
-</details>
-
 ## Features:
 
 ![Ola](https://raw.githubusercontent.com/lazynessmind/HorseModifiers/master/imgs/recipe-with-text.png "Ola")
@@ -65,4 +47,4 @@
 - **Twitter:**  https://twitter.com/_nesslazy
 - **Twitch:** https://www.twitch.tv/lazynessmind
 
-### License MIT | Copyright 2019 | lazynessmind
+### License MIT | Copyright `**this year**` | lazynessmind

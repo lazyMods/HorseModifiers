@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "horsemodifiers",
+  "version": "${version}",
+  "name": "Horse Modifiers",
+  "description": "Horses can be bred among themselves to create a better horse, so this mod changes this by adding carrots that alter the horse's attributes.",
+  "authors": [
+    "lazy"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/horse-modifiers",
+    "sources": "https://github.com/lazyMods/horse-modifiers",
+    "issues": "https://github.com/lazyMods/horse-modifiers/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/horsemodifiers/logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "lazy.horsemodifiers.platform.HorseModifiersFabric"
+    ],
+    "modmenu": [
+      "lazy.horsemodifiers.platform.ModMenuEntry"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": ">=1.16.4",
+    "architectury": ">=1.1.55"
+  },
+  "mixins": [
+    "horsemodifiers.mixins.json"
+  ]
+}

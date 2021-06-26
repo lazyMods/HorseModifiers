@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "horsemodifiers:flash_carrot"
+    ]
+  },
+  "criteria": {
+    "canCraft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:sugar"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "horsemodifiers:flash_carrot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "canCraft",
+      "has_the_recipe"
+    ]
+  ]
+}

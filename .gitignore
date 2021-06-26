@@ -1,33 +1,21 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
+build/
+*.ipr
+run/
+*.iws
+out/
+*.iml
+.gradle/
+output/
+bin/
+libs/
+temp/
+forge/src/generated/
+
 .classpath
 .project
-/.settings
-/.metadata
-/.classpath
-/.project
-/eclipse
-/bin
-/classes
-
-# idea
-out
-*.ipr
-*.iws
-*.iml
-.idea
-
-# gradle
-build
-.gradle
-imgs/*.psd
-
-# other
-eclipse
-run
-
-# Files from Forge MDK
-forge*changelog.txt
+.idea/
+classes/
+.metadata
+.vscode
+.settings
+*.launch

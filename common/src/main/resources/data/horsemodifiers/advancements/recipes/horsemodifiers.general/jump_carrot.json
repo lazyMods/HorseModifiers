@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "horsemodifiers:jump_carrot"
+    ]
+  },
+  "criteria": {
+    "canCraft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:piston"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "horsemodifiers:jump_carrot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "canCraft",
+      "has_the_recipe"
+    ]
+  ]
+}
