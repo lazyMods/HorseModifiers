@@ -12,5 +12,8 @@ public class DataGenerator {
         if (event.includeServer()) {
             event.getGenerator().addProvider(new RecipeGenerator(event.getGenerator()));
         }
+        if(event.includeClient()){
+            event.getGenerator().addProvider(new LangGenerator(event.getGenerator()));
+        }
     }
 }
